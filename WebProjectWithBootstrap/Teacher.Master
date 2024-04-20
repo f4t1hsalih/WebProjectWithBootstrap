@@ -44,29 +44,28 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="#"><i class="glyphicon glyphicon-briefcase"></i>Dersler</a>
+                    <a href="#"><i class="glyphicon glyphicon-book"></i>Dersler</a>
                 </li>
                 <li>
-                    <a href="#"><i class="glyphicon glyphicon-duplicate"></i>Mesajlar</a>
-
+                    <a href="#"><i class="glyphicon glyphicon-envelope"></i>Mesajlar</a>
                 </li>
                 <li>
-                    <a href="#"><i class="glyphicon glyphicon-link"></i>Duyurular</a>
+                    <a href="#"><i class="glyphicon glyphicon-bullhorn"></i>Duyurular</a>
                 </li>
                 <li>
-                    <a href="#"><i class="glyphicon glyphicon-paperclip"></i>Notlar</a>
+                    <a href="#"><i class="glyphicon glyphicon-font"></i>Notlar</a>
                 </li>
                 <li>
-                    <a href="#"><i class="glyphicon glyphicon-paperclip"></i>İstatistikler</a>
+                    <a href="#"><i class="glyphicon glyphicon-stats"></i>İstatistikler</a>
                 </li>
                 <li>
-                    <a href="#"><i class="glyphicon glyphicon-paperclip"></i>Grafikler</a>
+                    <a href="#"><i class="glyphicon glyphicon-signal"></i>Grafikler</a>
                 </li>
                 <li>
-                    <a href="#"><i class="glyphicon glyphicon-send"></i>Galeri</a>
+                    <a href="#"><i class="glyphicon glyphicon-picture"></i>Galeri</a>
                 </li>
                 <li>
-                    <a href="#"><i class="glyphicon glyphicon-apple"></i>Ayarlar</a>
+                    <a href="#"><i class="glyphicon glyphicon-cog"></i>Ayarlar</a>
                 </li>
             </ul>
 
