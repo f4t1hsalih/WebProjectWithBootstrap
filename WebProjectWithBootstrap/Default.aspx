@@ -16,30 +16,25 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-                <td>@mdo</td>
-                <td>@mdo</td>
-            </tr>
-            <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-                <td>@fat</td>
-                <td>@fat</td>
-            </tr>
-            <tr>
-                <th scope="row">3</th>
-                <td>Larry</td>
-                <td>the Bird</td>
-                <td>@twitter</td>
-                <td>@twitter</td>
-                <td>@twitter</td>
-            </tr>
+
+            <asp:Repeater ID="Repeater1" runat="server">
+
+                <ItemTemplate>
+
+                    <tr>
+                        <td><%#Eval("std_id") %></td>
+                        <td><%#Eval("std_name") %></td>
+                        <td><%#Eval("std_surname") %></td>
+                        <td><%#Eval("std_phone") %></td>
+                        <td><%#Eval("std_mail") %></td>
+                        <td><%#Eval("std_password") %></td>
+
+                    </tr>
+
+                </ItemTemplate>
+
+            </asp:Repeater>
+
         </tbody>
     </table>
 
