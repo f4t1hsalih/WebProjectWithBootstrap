@@ -13,6 +13,7 @@
                 <th scope="col">Telefon</th>
                 <th scope="col">Mail</th>
                 <th scope="col">Şifre</th>
+                <th scope="col">İşlemler</th>
             </tr>
         </thead>
         <tbody>
@@ -28,6 +29,10 @@
                         <td><%#Eval("std_phone") %></td>
                         <td><%#Eval("std_mail") %></td>
                         <td><%#Eval("std_password") %></td>
+                        <td>
+                            <asp:HyperLink ID="HyperLink1" CssClass="btn btn-danger" runat="server">Sil</asp:HyperLink>
+                            <asp:HyperLink ID="HyperLink2" CssClass="btn btn-success" runat="server">Güncelle</asp:HyperLink>
+                        </td>
 
                     </tr>
 
