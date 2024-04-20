@@ -163,6 +163,7 @@ WHERE (([std_id] = @std_id))</CommandText>
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
+              <xs:element name="std_photo" msprop:Generator_ColumnPropNameInRow="std_photo" msprop:Generator_ColumnPropNameInTable="std_photoColumn" msprop:Generator_ColumnVarNameInTable="columnstd_photo" msprop:Generator_UserColumnName="std_photo" type="xs:string" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

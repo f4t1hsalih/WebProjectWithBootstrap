@@ -291,6 +291,8 @@ namespace WebProjectWithBootstrap {
             
             private global::System.Data.DataColumn columnstd_password;
             
+            private global::System.Data.DataColumn columnstd_photo;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public tbl_studentsDataTable() {
@@ -374,6 +376,14 @@ namespace WebProjectWithBootstrap {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn std_photoColumn {
+                get {
+                    return this.columnstd_photo;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -409,7 +419,7 @@ namespace WebProjectWithBootstrap {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public tbl_studentsRow Addtbl_studentsRow(string std_name, string std_surname, string std_phone, string std_mail, string std_password) {
+            public tbl_studentsRow Addtbl_studentsRow(string std_name, string std_surname, string std_phone, string std_mail, string std_password, string std_photo) {
                 tbl_studentsRow rowtbl_studentsRow = ((tbl_studentsRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -417,7 +427,8 @@ namespace WebProjectWithBootstrap {
                         std_surname,
                         std_phone,
                         std_mail,
-                        std_password};
+                        std_password,
+                        std_photo};
                 rowtbl_studentsRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowtbl_studentsRow);
                 return rowtbl_studentsRow;
@@ -453,6 +464,7 @@ namespace WebProjectWithBootstrap {
                 this.columnstd_phone = base.Columns["std_phone"];
                 this.columnstd_mail = base.Columns["std_mail"];
                 this.columnstd_password = base.Columns["std_password"];
+                this.columnstd_photo = base.Columns["std_photo"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -470,6 +482,8 @@ namespace WebProjectWithBootstrap {
                 base.Columns.Add(this.columnstd_mail);
                 this.columnstd_password = new global::System.Data.DataColumn("std_password", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnstd_password);
+                this.columnstd_photo = new global::System.Data.DataColumn("std_photo", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnstd_photo);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnstd_id}, true));
                 this.columnstd_id.AutoIncrement = true;
@@ -716,6 +730,22 @@ namespace WebProjectWithBootstrap {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string std_photo {
+                get {
+                    try {
+                        return ((string)(this[this.tabletbl_students.std_photoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'std_photo\' in table \'tbl_students\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabletbl_students.std_photoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool Isstd_nameNull() {
                 return this.IsNull(this.tabletbl_students.std_nameColumn);
             }
@@ -772,6 +802,18 @@ namespace WebProjectWithBootstrap {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void Setstd_passwordNull() {
                 this[this.tabletbl_students.std_passwordColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool Isstd_photoNull() {
+                return this.IsNull(this.tabletbl_students.std_photoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void Setstd_photoNull() {
+                this[this.tabletbl_students.std_photoColumn] = global::System.Convert.DBNull;
             }
         }
         
