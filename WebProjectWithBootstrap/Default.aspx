@@ -31,7 +31,7 @@
                         <td><%#Eval("std_password") %></td>
                         <td>
                             <asp:HyperLink ID="HyperLink1" NavigateUrl='<%#"~/StudentDelete.aspx?std_id="+Eval("std_id") %>' CssClass="btn btn-danger" runat="server">Sil</asp:HyperLink>
-                            <asp:HyperLink ID="HyperLink2" CssClass="btn btn-success" runat="server">Güncelle</asp:HyperLink>
+                            <asp:HyperLink ID="HyperLink2" NavigateUrl='<%#"~/StudentUpdate.aspx?std_id="+Eval("std_id") %>' CssClass="btn btn-success" runat="server">Güncelle</asp:HyperLink>
                         </td>
 
                     </tr>

@@ -11,7 +11,9 @@ namespace WebProjectWithBootstrap
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            int id = Convert.ToInt32(Request.QueryString["std_id"].ToString());
 
+            txtStdId.Text = id.ToString();
         }
     }
 }
