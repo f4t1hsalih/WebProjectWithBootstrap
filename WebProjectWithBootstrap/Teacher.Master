@@ -37,10 +37,10 @@
                 <li class="active">
                     <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="glyphicon glyphicon-home"></i>Öğrenci Listesi</a>
                     <ul class="collapse list-unstyled" id="homeSubmenu">
-                        <li><a href="#">Öğrenci Bul</a></li>
-                        <li><a href="#">Öğrenci Ekle</a></li>
-                        <li><a href="#">Öğrenci Sil</a></li>
-                        <li><a href="#">Öğrenci Güncelle</a></li>
+                        <li><a href="#"><i class="glyphicon glyphicon-question-sign"></i>Öğrenci Bul</a></li>
+                        <li><a href="#"><i class="glyphicon glyphicon-plus-sign"></i>Öğrenci Ekle</a></li>
+                        <li><a href="#"><i class="glyphicon glyphicon-minus-sign"></i>Öğrenci Sil</a></li>
+                        <li><a href="#"><i class="glyphicon glyphicon-info-sign"></i>Öğrenci Güncelle</a></li>
                     </ul>
                 </li>
                 <li>
