@@ -37,7 +37,7 @@
             </div>
             <br />
             <div>
-                <asp:Button ID="Button1" runat="server" Class="btn btn-info" Text="Kaydet" />
+                <asp:Button ID="Button1" runat="server" Class="btn btn-info" Text="Kaydet" OnClick="Button1_Click" />
             </div>
         </div>
     </form>
