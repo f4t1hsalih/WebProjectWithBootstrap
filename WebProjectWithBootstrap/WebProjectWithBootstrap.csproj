@@ -337,6 +337,7 @@
     <Content Include="Dosyalar1\StyleSheet2.css" />
     <Content Include="StudentDelete.aspx" />
     <Content Include="StudentInsert.aspx" />
+    <Content Include="StudentUpdate.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -366,6 +367,13 @@
     </Compile>
     <Compile Include="StudentInsert.aspx.designer.cs">
       <DependentUpon>StudentInsert.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StudentUpdate.aspx.cs">
+      <DependentUpon>StudentUpdate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StudentUpdate.aspx.designer.cs">
+      <DependentUpon>StudentUpdate.aspx</DependentUpon>
     </Compile>
     <Compile Include="Teacher.Master.cs">
       <DependentUpon>Teacher.Master</DependentUpon>
