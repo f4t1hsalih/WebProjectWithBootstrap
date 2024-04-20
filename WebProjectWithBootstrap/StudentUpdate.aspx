@@ -42,7 +42,7 @@
             </div>
             <br />
             <div>
-                <asp:Button ID="Button1" runat="server" Class="btn btn-primary" Text="Güncelle" />
+                <asp:Button ID="Button1" runat="server" Class="btn btn-primary" Text="Güncelle" OnClick="Button1_Click" />
             </div>
         </div>
     </form>

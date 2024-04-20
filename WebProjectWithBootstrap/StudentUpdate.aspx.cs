@@ -9,13 +9,14 @@ namespace WebProjectWithBootstrap
 {
     public partial class StudentUpdate : System.Web.UI.Page
     {
+        int id;
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Page.IsPostBack == false)
             {
                 try
                 {
-                    int id = Convert.ToInt32(Request.QueryString["std_id"].ToString());
+                    id = Convert.ToInt32(Request.QueryString["std_id"].ToString());
                     txtStdId.Text = id.ToString();
 
                     DataSetTableAdapters.tbl_studentsTableAdapter dt = new DataSetTableAdapters.tbl_studentsTableAdapter();
@@ -31,6 +32,13 @@ namespace WebProjectWithBootstrap
                     txtStdPhoto.Text = "Link Girin";
                 }
             }
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            DataSetTableAdapters.tbl_studentsTableAdapter dt = new DataSetTableAdapters.tbl_studentsTableAdapter();
+            dt.StudentUpdate(txtStdName.Text, txtStdSurname.Text, txtStdPhone.Text, txtStdMail.Text, txtStdPassword.Text, txtStdPhoto.Text, Convert.ToInt32(txtStdId.Text));
+            Response.Redirect("Default.aspx");
         }
     }
 }
