@@ -4,8 +4,8 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
 
-    <table class="table table-hover">
-        <thead class="thead-dark ">
+    <table class="table table-bordered table-hover">
+        <thead>
             <tr>
                 <th scope="col">#</th>
                 <th scope="col">Ad</th>
