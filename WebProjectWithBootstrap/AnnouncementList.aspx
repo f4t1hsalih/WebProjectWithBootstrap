@@ -26,8 +26,8 @@
                         <td><%#Eval("anc_content") %></td>
                         <td><%#Eval("anc_tch") %></td>
                         <td>
-                            <asp:HyperLink ID="HyperLink1" CssClass="btn btn-danger" runat="server">Sil</asp:HyperLink>
-                            <asp:HyperLink ID="HyperLink2" CssClass="btn btn-success" runat="server">Güncelle</asp:HyperLink>
+                            <asp:HyperLink ID="HyperLink1" NavigateUrl='<%#"~/AnnouncementDelete.aspx?anc_id="+Eval("anc_id") %>' CssClass="btn btn-danger" runat="server">Sil</asp:HyperLink>
+                            <asp:HyperLink ID="HyperLink2" NavigateUrl='<%#"~/AnnouncementUpdate.aspx?anc_id="+Eval("anc_id") %>' CssClass="btn btn-success" runat="server">Güncelle</asp:HyperLink>
                         </td>
 
                     </tr>
