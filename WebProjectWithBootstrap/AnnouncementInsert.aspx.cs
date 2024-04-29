@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace WebProjectWithBootstrap
 {
@@ -11,7 +6,12 @@ namespace WebProjectWithBootstrap
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            // Burada sayfa yüklenirken dataset içerisindeki öğretmenlerin listesi dropdownlist'e yüklenir.
+            DataSetTableAdapters.tbl_teachersTableAdapter dt = new DataSetTableAdapters.tbl_teachersTableAdapter();
+            ddlAncTch.DataSource = dt.TeacherList();
+            ddlAncTch.DataTextField = "tch_name";
+            ddlAncTch.DataValueField = "tch_id";
+            ddlAncTch.DataBind();
         }
     }
 }
