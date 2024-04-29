@@ -18,11 +18,11 @@
             <br />
             <div>
                 <asp:Label for="txtAncContent" runat="server" Text="Duyuru İçerik:"></asp:Label>
-                <textarea id="txtAncContent" rows="5" class="form-control"></textarea>
+                <textarea id="txtAncContent" rows="5" class="form-control" runat="server"></textarea>
             </div>
             <br />
             <div>
-                <asp:Button ID="Button1" runat="server" Class="btn btn-info" Text="Oluştur" />
+                <asp:Button ID="Button1" runat="server" Class="btn btn-info" Text="Oluştur" OnClick="Button1_Click" />
             </div>
         </div>
     </form>
