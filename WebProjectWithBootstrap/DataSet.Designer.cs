@@ -2060,11 +2060,19 @@ namespace WebProjectWithBootstrap.DataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT        tbl_announcements.*\r\nFROM            tbl_announcements";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = "INSERT INTO [tbl_announcements] ([anc_title], [anc_content], [anc_tch]) VALUES (@" +
+                "anc_title, @anc_content, @anc_tch)";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@anc_title", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "anc_title", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@anc_content", global::System.Data.SqlDbType.VarChar, 500, global::System.Data.ParameterDirection.Input, 0, 0, "anc_content", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@anc_tch", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "anc_tch", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2219,6 +2227,47 @@ namespace WebProjectWithBootstrap.DataSetTableAdapters {
                     this.Adapter.UpdateCommand.Connection.Close();
                 }
             }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, false)]
+        public virtual int AnnouncementInsert(string anc_title, string anc_content, global::System.Nullable<int> anc_tch) {
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[1];
+            if ((anc_title == null)) {
+                command.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[0].Value = ((string)(anc_title));
+            }
+            if ((anc_content == null)) {
+                command.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[1].Value = ((string)(anc_content));
+            }
+            if ((anc_tch.HasValue == true)) {
+                command.Parameters[2].Value = ((int)(anc_tch.Value));
+            }
+            else {
+                command.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            int returnValue;
+            try {
+                returnValue = command.ExecuteNonQuery();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            return returnValue;
         }
     }
     
