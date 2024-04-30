@@ -172,6 +172,7 @@
     <Content Include="AnnouncementDelete.aspx" />
     <Content Include="AnnouncementInsert.aspx" />
     <Content Include="AnnouncementList.aspx" />
+    <Content Include="AnnouncementUpdate.aspx" />
     <Content Include="StudentList.aspx" />
     <Content Include="Dosyalar1\bootstrap-3.3.7\.gitattributes" />
     <Content Include="Dosyalar1\bootstrap-3.3.7\.gitignore" />
@@ -466,6 +467,13 @@
     </Compile>
     <Compile Include="AnnouncementList.aspx.designer.cs">
       <DependentUpon>AnnouncementList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AnnouncementUpdate.aspx.cs">
+      <DependentUpon>AnnouncementUpdate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AnnouncementUpdate.aspx.designer.cs">
+      <DependentUpon>AnnouncementUpdate.aspx</DependentUpon>
     </Compile>
     <Compile Include="DataSet.Designer.cs">
       <AutoGen>True</AutoGen>

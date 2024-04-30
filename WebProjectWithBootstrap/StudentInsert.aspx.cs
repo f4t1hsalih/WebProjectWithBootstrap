@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace WebProjectWithBootstrap
 {
@@ -17,8 +12,8 @@ namespace WebProjectWithBootstrap
         protected void Button1_Click(object sender, EventArgs e)
         {
             DataSetTableAdapters.tbl_studentsTableAdapter dt = new DataSetTableAdapters.tbl_studentsTableAdapter();
-            dt.StudentInsert(txtStdName.Text,txtStdSurname.Text,txtStdPhone.Text,txtStdMail.Text,txtStdPassword.Text,txtStdPhoto.Text);
-            Response.Redirect("Default.aspx");
+            dt.StudentInsert(txtStdName.Text, txtStdSurname.Text, txtStdPhone.Text, txtStdMail.Text, txtStdPassword.Text, txtStdPhoto.Text);
+            Response.Redirect("StudentList.aspx");
         }
     }
 }

@@ -13,12 +13,12 @@
             <br />
             <div>
                 <asp:Label for="txtAncTitle" runat="server" Text="Duyuru Başlık:"></asp:Label>
-                <asp:TextBox ID="txtAncTitle" runat="server" CssClass="form-control"></asp:TextBox>
+                <asp:TextBox ID="txtAncTitle" runat="server" Class="form-control"></asp:TextBox>
             </div>
             <br />
             <div>
                 <asp:Label for="txtAncContent" runat="server" Text="Duyuru İçerik:"></asp:Label>
-                <textarea id="txtAncContent" rows="5" class="form-control" runat="server"></textarea>
+                <textarea ID="txtAncContent" rows="5" Class="form-control" runat="server"></textarea>
             </div>
             <br />
             <div>

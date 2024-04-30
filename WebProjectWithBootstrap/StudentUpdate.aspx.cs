@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace WebProjectWithBootstrap
 {
@@ -38,7 +34,7 @@ namespace WebProjectWithBootstrap
         {
             DataSetTableAdapters.tbl_studentsTableAdapter dt = new DataSetTableAdapters.tbl_studentsTableAdapter();
             dt.StudentUpdate(txtStdName.Text, txtStdSurname.Text, txtStdPhone.Text, txtStdMail.Text, txtStdPassword.Text, txtStdPhoto.Text, Convert.ToInt32(txtStdId.Text));
-            Response.Redirect("Default.aspx");
+            Response.Redirect("StudentList.aspx");
         }
     }
 }
