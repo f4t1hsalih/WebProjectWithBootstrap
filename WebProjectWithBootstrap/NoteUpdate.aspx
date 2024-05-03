@@ -47,7 +47,7 @@
             </div>
             <br />
             <div>
-                <asp:Button ID="btnCalculate" runat="server" Class="btn btn-toolbar" Text="Hesapla" />
+                <asp:Button ID="btnCalculate" runat="server" Class="btn btn-toolbar" Text="Hesapla" OnClick="btnCalculate_Click" />
                 <asp:Button ID="BtnUpdate" runat="server" Class="btn btn-primary" Text="Güncelle" />
             </div>
         </div>
