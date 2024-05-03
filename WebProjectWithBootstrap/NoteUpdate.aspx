@@ -48,7 +48,7 @@
             <br />
             <div>
                 <asp:Button ID="btnCalculate" runat="server" Class="btn btn-toolbar" Text="Hesapla" OnClick="btnCalculate_Click" />
-                <asp:Button ID="BtnUpdate" runat="server" Class="btn btn-primary" Text="Güncelle" />
+                <asp:Button ID="BtnUpdate" runat="server" Class="btn btn-primary" Text="Güncelle" OnClick="BtnUpdate_Click" />
             </div>
         </div>
     </form>
