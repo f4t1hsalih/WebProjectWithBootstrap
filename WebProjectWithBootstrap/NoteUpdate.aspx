@@ -7,13 +7,13 @@
     <form id="Form1" runat="server">
         <div class="form-group">
             <div>
-                <asp:Label for="ddlClsName" runat="server" Text="Ders Adı:"></asp:Label>
-                <asp:DropDownList ID="ddlClsName" runat="server" Class="form-control"></asp:DropDownList>
+                <asp:Label for="txtClsName" runat="server" Text="Ders Adı:"></asp:Label>
+                <asp:TextBox ID="txtClsName" runat="server" CssClass="form-control"></asp:TextBox>
             </div>
             <br />
             <div>
                 <asp:Label for="txtStdID" runat="server" Text="Öğrenci ID:"></asp:Label>
-                <asp:TextBox ID="txtStdID" runat="server" CssClass="form-control" ReadOnly="true"></asp:TextBox>
+                <asp:TextBox ID="txtStdID" runat="server" CssClass="form-control"></asp:TextBox>
             </div>
             <br />
             <div>
@@ -47,8 +47,8 @@
             </div>
             <br />
             <div>
-                <asp:Button ID="Button1" runat="server" Class="btn btn-toolbar" Text="Hesapla" />
-                <asp:Button ID="Button2" runat="server" Class="btn btn-primary" Text="Güncelle" />
+                <asp:Button ID="btnCalculate" runat="server" Class="btn btn-toolbar" Text="Hesapla" />
+                <asp:Button ID="BtnUpdate" runat="server" Class="btn btn-primary" Text="Güncelle" />
             </div>
         </div>
     </form>
