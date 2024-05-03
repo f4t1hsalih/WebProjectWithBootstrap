@@ -58,7 +58,7 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="#"><i class="glyphicon glyphicon-font"></i>Notlar</a>
+                    <a href="NoteList.aspx"><i class="glyphicon glyphicon-font"></i>Notlar</a>
                 </li>
                 <li>
                     <a href="#"><i class="glyphicon glyphicon-stats"></i>İstatistikler</a>

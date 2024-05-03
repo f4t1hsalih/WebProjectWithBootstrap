@@ -173,6 +173,7 @@
     <Content Include="AnnouncementInsert.aspx" />
     <Content Include="AnnouncementList.aspx" />
     <Content Include="AnnouncementUpdate.aspx" />
+    <Content Include="NoteList.aspx" />
     <Content Include="StudentList.aspx" />
     <Content Include="Dosyalar1\bootstrap-3.3.7\.gitattributes" />
     <Content Include="Dosyalar1\bootstrap-3.3.7\.gitignore" />
@@ -479,6 +480,13 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="NoteList.aspx.cs">
+      <DependentUpon>NoteList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NoteList.aspx.designer.cs">
+      <DependentUpon>NoteList.aspx</DependentUpon>
     </Compile>
     <Compile Include="StudentList.aspx.cs">
       <DependentUpon>StudentList.aspx</DependentUpon>
