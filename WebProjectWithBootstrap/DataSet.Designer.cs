@@ -1373,6 +1373,10 @@ namespace WebProjectWithBootstrap {
             
             private global::System.Data.DataColumn columnDurum;
             
+            private global::System.Data.DataColumn columnNot_ID;
+            
+            private global::System.Data.DataColumn columnÖğrenci_ID;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public Std_NotesDataTable() {
@@ -1472,6 +1476,22 @@ namespace WebProjectWithBootstrap {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn Not_IDColumn {
+                get {
+                    return this.columnNot_ID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn Öğrenci_IDColumn {
+                get {
+                    return this.columnÖğrenci_ID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -1507,7 +1527,7 @@ namespace WebProjectWithBootstrap {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public Std_NotesRow AddStd_NotesRow(int ID, string Öğrenci_Adı, string Ders, byte Sınav_1, byte Sınav_2, byte Sınav_3, decimal Ortalama, bool Durum) {
+            public Std_NotesRow AddStd_NotesRow(int ID, string Öğrenci_Adı, string Ders, byte Sınav_1, byte Sınav_2, byte Sınav_3, decimal Ortalama, bool Durum, int Öğrenci_ID) {
                 Std_NotesRow rowStd_NotesRow = ((Std_NotesRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         ID,
@@ -1517,7 +1537,9 @@ namespace WebProjectWithBootstrap {
                         Sınav_2,
                         Sınav_3,
                         Ortalama,
-                        Durum};
+                        Durum,
+                        null,
+                        Öğrenci_ID};
                 rowStd_NotesRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowStd_NotesRow);
                 return rowStd_NotesRow;
@@ -1548,6 +1570,8 @@ namespace WebProjectWithBootstrap {
                 this.columnSınav_3 = base.Columns["Sınav_3"];
                 this.columnOrtalama = base.Columns["Ortalama"];
                 this.columnDurum = base.Columns["Durum"];
+                this.columnNot_ID = base.Columns["Not_ID"];
+                this.columnÖğrenci_ID = base.Columns["Öğrenci_ID"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1569,10 +1593,20 @@ namespace WebProjectWithBootstrap {
                 base.Columns.Add(this.columnOrtalama);
                 this.columnDurum = new global::System.Data.DataColumn("Durum", typeof(bool), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDurum);
+                this.columnNot_ID = new global::System.Data.DataColumn("Not_ID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNot_ID);
+                this.columnÖğrenci_ID = new global::System.Data.DataColumn("Öğrenci_ID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnÖğrenci_ID);
                 this.columnID.AllowDBNull = false;
                 this.columnÖğrenci_Adı.ReadOnly = true;
                 this.columnÖğrenci_Adı.MaxLength = 61;
                 this.columnDers.MaxLength = 20;
+                this.columnNot_ID.AutoIncrement = true;
+                this.columnNot_ID.AutoIncrementSeed = -1;
+                this.columnNot_ID.AutoIncrementStep = -1;
+                this.columnNot_ID.AllowDBNull = false;
+                this.columnNot_ID.ReadOnly = true;
+                this.columnÖğrenci_ID.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2269,6 +2303,28 @@ namespace WebProjectWithBootstrap {
                 }
                 set {
                     this[this.tableStd_Notes.DurumColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int Not_ID {
+                get {
+                    return ((int)(this[this.tableStd_Notes.Not_IDColumn]));
+                }
+                set {
+                    this[this.tableStd_Notes.Not_IDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int Öğrenci_ID {
+                get {
+                    return ((int)(this[this.tableStd_Notes.Öğrenci_IDColumn]));
+                }
+                set {
+                    this[this.tableStd_Notes.Öğrenci_IDColumn] = value;
                 }
             }
             
@@ -3991,6 +4047,8 @@ namespace WebProjectWithBootstrap.DataSetTableAdapters {
             tableMapping.ColumnMappings.Add("Sınav_3", "Sınav_3");
             tableMapping.ColumnMappings.Add("Ortalama", "Ortalama");
             tableMapping.ColumnMappings.Add("Durum", "Durum");
+            tableMapping.ColumnMappings.Add("Not_ID", "Not_ID");
+            tableMapping.ColumnMappings.Add("Öğrenci_ID", "Öğrenci_ID");
             this._adapter.TableMappings.Add(tableMapping);
         }
         

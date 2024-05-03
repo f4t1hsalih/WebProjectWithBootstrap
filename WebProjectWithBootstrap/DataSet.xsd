@@ -283,6 +283,8 @@ FROM            tbl_teachers</CommandText>
               <Mapping SourceColumn="Sınav_3" DataSetColumn="Sınav_3" />
               <Mapping SourceColumn="Ortalama" DataSetColumn="Ortalama" />
               <Mapping SourceColumn="Durum" DataSetColumn="Durum" />
+              <Mapping SourceColumn="Not_ID" DataSetColumn="Not_ID" />
+              <Mapping SourceColumn="Öğrenci_ID" DataSetColumn="Öğrenci_ID" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -381,29 +383,31 @@ FROM            tbl_teachers</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Std_Notes" msprop:Generator_RowEvHandlerName="Std_NotesRowChangeEventHandler" msprop:Generator_RowDeletedName="Std_NotesRowDeleted" msprop:Generator_RowDeletingName="Std_NotesRowDeleting" msprop:Generator_RowEvArgName="Std_NotesRowChangeEvent" msprop:Generator_TablePropName="Std_Notes" msprop:Generator_RowChangedName="Std_NotesRowChanged" msprop:Generator_RowChangingName="Std_NotesRowChanging" msprop:Generator_TableClassName="Std_NotesDataTable" msprop:Generator_RowClassName="Std_NotesRow" msprop:Generator_TableVarName="tableStd_Notes" msprop:Generator_UserTableName="Std_Notes">
+        <xs:element name="Std_Notes" msprop:Generator_RowClassName="Std_NotesRow" msprop:Generator_RowEvHandlerName="Std_NotesRowChangeEventHandler" msprop:Generator_RowDeletedName="Std_NotesRowDeleted" msprop:Generator_RowDeletingName="Std_NotesRowDeleting" msprop:Generator_RowEvArgName="Std_NotesRowChangeEvent" msprop:Generator_TablePropName="Std_Notes" msprop:Generator_RowChangedName="Std_NotesRowChanged" msprop:Generator_UserTableName="Std_Notes" msprop:Generator_RowChangingName="Std_NotesRowChanging" msprop:Generator_TableClassName="Std_NotesDataTable" msprop:Generator_TableVarName="tableStd_Notes">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="ID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_UserColumnName="ID" type="xs:int" />
-              <xs:element name="Öğrenci_Adı" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInRow="Öğrenci_Adı" msprop:Generator_ColumnPropNameInTable="Öğrenci_AdıColumn" msprop:Generator_ColumnVarNameInTable="columnÖğrenci_Adı" msprop:Generator_UserColumnName="Öğrenci_Adı" minOccurs="0">
+              <xs:element name="ID" msprop:Generator_UserColumnName="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnVarNameInTable="columnID" type="xs:int" />
+              <xs:element name="Öğrenci_Adı" msdata:ReadOnly="true" msprop:Generator_UserColumnName="Öğrenci_Adı" msprop:Generator_ColumnPropNameInTable="Öğrenci_AdıColumn" msprop:Generator_ColumnPropNameInRow="Öğrenci_Adı" msprop:Generator_ColumnVarNameInTable="columnÖğrenci_Adı" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="61" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Ders" msprop:Generator_ColumnPropNameInRow="Ders" msprop:Generator_ColumnPropNameInTable="DersColumn" msprop:Generator_ColumnVarNameInTable="columnDers" msprop:Generator_UserColumnName="Ders" minOccurs="0">
+              <xs:element name="Ders" msprop:Generator_UserColumnName="Ders" msprop:Generator_ColumnPropNameInTable="DersColumn" msprop:Generator_ColumnPropNameInRow="Ders" msprop:Generator_ColumnVarNameInTable="columnDers" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="20" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Sınav_1" msprop:Generator_ColumnPropNameInRow="Sınav_1" msprop:Generator_ColumnPropNameInTable="Sınav_1Column" msprop:Generator_ColumnVarNameInTable="columnSınav_1" msprop:Generator_UserColumnName="Sınav_1" type="xs:unsignedByte" minOccurs="0" />
-              <xs:element name="Sınav_2" msprop:Generator_ColumnPropNameInRow="Sınav_2" msprop:Generator_ColumnPropNameInTable="Sınav_2Column" msprop:Generator_ColumnVarNameInTable="columnSınav_2" msprop:Generator_UserColumnName="Sınav_2" type="xs:unsignedByte" minOccurs="0" />
-              <xs:element name="Sınav_3" msprop:Generator_ColumnPropNameInRow="Sınav_3" msprop:Generator_ColumnPropNameInTable="Sınav_3Column" msprop:Generator_ColumnVarNameInTable="columnSınav_3" msprop:Generator_UserColumnName="Sınav_3" type="xs:unsignedByte" minOccurs="0" />
-              <xs:element name="Ortalama" msprop:Generator_ColumnPropNameInRow="Ortalama" msprop:Generator_ColumnPropNameInTable="OrtalamaColumn" msprop:Generator_ColumnVarNameInTable="columnOrtalama" msprop:Generator_UserColumnName="Ortalama" type="xs:decimal" minOccurs="0" />
-              <xs:element name="Durum" msprop:Generator_ColumnPropNameInRow="Durum" msprop:Generator_ColumnPropNameInTable="DurumColumn" msprop:Generator_ColumnVarNameInTable="columnDurum" msprop:Generator_UserColumnName="Durum" type="xs:boolean" minOccurs="0" />
+              <xs:element name="Sınav_1" msprop:Generator_UserColumnName="Sınav_1" msprop:Generator_ColumnPropNameInTable="Sınav_1Column" msprop:Generator_ColumnPropNameInRow="Sınav_1" msprop:Generator_ColumnVarNameInTable="columnSınav_1" type="xs:unsignedByte" minOccurs="0" />
+              <xs:element name="Sınav_2" msprop:Generator_UserColumnName="Sınav_2" msprop:Generator_ColumnPropNameInTable="Sınav_2Column" msprop:Generator_ColumnPropNameInRow="Sınav_2" msprop:Generator_ColumnVarNameInTable="columnSınav_2" type="xs:unsignedByte" minOccurs="0" />
+              <xs:element name="Sınav_3" msprop:Generator_UserColumnName="Sınav_3" msprop:Generator_ColumnPropNameInTable="Sınav_3Column" msprop:Generator_ColumnPropNameInRow="Sınav_3" msprop:Generator_ColumnVarNameInTable="columnSınav_3" type="xs:unsignedByte" minOccurs="0" />
+              <xs:element name="Ortalama" msprop:Generator_UserColumnName="Ortalama" msprop:Generator_ColumnPropNameInTable="OrtalamaColumn" msprop:Generator_ColumnPropNameInRow="Ortalama" msprop:Generator_ColumnVarNameInTable="columnOrtalama" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Durum" msprop:Generator_UserColumnName="Durum" msprop:Generator_ColumnPropNameInTable="DurumColumn" msprop:Generator_ColumnPropNameInRow="Durum" msprop:Generator_ColumnVarNameInTable="columnDurum" type="xs:boolean" minOccurs="0" />
+              <xs:element name="Not_ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInRow="Not_ID" msprop:Generator_ColumnPropNameInTable="Not_IDColumn" msprop:Generator_ColumnVarNameInTable="columnNot_ID" msprop:Generator_UserColumnName="Not_ID" type="xs:int" />
+              <xs:element name="Öğrenci_ID" msprop:Generator_ColumnPropNameInRow="Öğrenci_ID" msprop:Generator_ColumnPropNameInTable="Öğrenci_IDColumn" msprop:Generator_ColumnVarNameInTable="columnÖğrenci_ID" msprop:Generator_UserColumnName="Öğrenci_ID" type="xs:int" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
@@ -424,7 +428,7 @@ FROM            tbl_teachers</CommandText>
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="FK_tbl_announcements_tbl_teachers" msdata:parent="tbl_teachers" msdata:child="tbl_announcements" msdata:parentkey="tch_id" msdata:childkey="anc_tch" msprop:Generator_UserParentTable="tbl_teachers" msprop:Generator_UserChildTable="tbl_announcements" msprop:Generator_RelationVarName="relationFK_tbl_announcements_tbl_teachers" msprop:Generator_ChildPropName="Gettbl_announcementsRows" msprop:Generator_UserRelationName="FK_tbl_announcements_tbl_teachers" msprop:Generator_ParentPropName="tbl_teachersRow" />
+      <msdata:Relationship name="FK_tbl_announcements_tbl_teachers" msdata:parent="tbl_teachers" msdata:child="tbl_announcements" msdata:parentkey="tch_id" msdata:childkey="anc_tch" msprop:Generator_UserParentTable="tbl_teachers" msprop:Generator_UserChildTable="tbl_announcements" msprop:Generator_RelationVarName="relationFK_tbl_announcements_tbl_teachers" msprop:Generator_ChildPropName="Gettbl_announcementsRows" msprop:Generator_ParentPropName="tbl_teachersRow" msprop:Generator_UserRelationName="FK_tbl_announcements_tbl_teachers" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>

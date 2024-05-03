@@ -174,6 +174,7 @@
     <Content Include="AnnouncementList.aspx" />
     <Content Include="AnnouncementUpdate.aspx" />
     <Content Include="NoteList.aspx" />
+    <Content Include="NoteUpdate.aspx" />
     <Content Include="StudentList.aspx" />
     <Content Include="Dosyalar1\bootstrap-3.3.7\.gitattributes" />
     <Content Include="Dosyalar1\bootstrap-3.3.7\.gitignore" />
@@ -487,6 +488,13 @@
     </Compile>
     <Compile Include="NoteList.aspx.designer.cs">
       <DependentUpon>NoteList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NoteUpdate.aspx.cs">
+      <DependentUpon>NoteUpdate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NoteUpdate.aspx.designer.cs">
+      <DependentUpon>NoteUpdate.aspx</DependentUpon>
     </Compile>
     <Compile Include="StudentList.aspx.cs">
       <DependentUpon>StudentList.aspx</DependentUpon>
