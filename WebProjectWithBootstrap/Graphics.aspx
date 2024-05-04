@@ -10,7 +10,7 @@
                 <td>
                     <asp:Chart ID="Chart1" runat="server" Width="400px">
                         <series>
-                            <asp:Series Name="Kitap" ChartType="Pie">
+                            <asp:Series Name="Classes" ChartType="Pie">
                             </asp:Series>
                         </series>
                         <chartareas>
@@ -22,7 +22,7 @@
                 <td>
                     <asp:Chart ID="Chart2" runat="server" Width="400px">
                         <series>
-                            <asp:Series Name="Series1" ChartType="Doughnut">
+                            <asp:Series Name="Gender" ChartType="Doughnut">
                             </asp:Series>
                         </series>
                         <chartareas>
