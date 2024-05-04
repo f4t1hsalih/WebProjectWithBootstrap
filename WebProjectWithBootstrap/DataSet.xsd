@@ -275,7 +275,6 @@ FROM            tbl_teachers</CommandText>
               </DbSource>
             </MainSource>
             <Mappings>
-              <Mapping SourceColumn="ID" DataSetColumn="ID" />
               <Mapping SourceColumn="Öğrenci_Adı" DataSetColumn="Öğrenci_Adı" />
               <Mapping SourceColumn="Ders" DataSetColumn="Ders" />
               <Mapping SourceColumn="Sınav_1" DataSetColumn="Sınav_1" />
@@ -500,7 +499,6 @@ FROM            tbl_classes where cls_id=@cls_id</CommandText>
         <xs:element name="Std_Notes" msprop:Generator_RowEvHandlerName="Std_NotesRowChangeEventHandler" msprop:Generator_RowDeletedName="Std_NotesRowDeleted" msprop:Generator_RowDeletingName="Std_NotesRowDeleting" msprop:Generator_RowEvArgName="Std_NotesRowChangeEvent" msprop:Generator_TablePropName="Std_Notes" msprop:Generator_RowChangedName="Std_NotesRowChanged" msprop:Generator_UserTableName="Std_Notes" msprop:Generator_RowChangingName="Std_NotesRowChanging" msprop:Generator_RowClassName="Std_NotesRow" msprop:Generator_TableClassName="Std_NotesDataTable" msprop:Generator_TableVarName="tableStd_Notes">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_UserColumnName="ID" msprop:Generator_ColumnVarNameInTable="columnID" type="xs:int" />
               <xs:element name="Öğrenci_Adı" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInTable="Öğrenci_AdıColumn" msprop:Generator_ColumnPropNameInRow="Öğrenci_Adı" msprop:Generator_UserColumnName="Öğrenci_Adı" msprop:Generator_ColumnVarNameInTable="columnÖğrenci_Adı" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -552,6 +550,10 @@ FROM            tbl_classes where cls_id=@cls_id</CommandText>
     <xs:unique name="tbl_teachers_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:tbl_teachers" />
       <xs:field xpath="mstns:tch_id" />
+    </xs:unique>
+    <xs:unique name="Std_Notes_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Std_Notes" />
+      <xs:field xpath="mstns:Not_ID" />
     </xs:unique>
     <xs:unique name="tbl_classes_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:tbl_classes" />

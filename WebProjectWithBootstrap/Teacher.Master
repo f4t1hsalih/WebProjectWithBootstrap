@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>Sınav Not Sistemi</title>
+    <title></title>
 
     <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
 
@@ -68,7 +68,7 @@
                     <a href="#"><i class="glyphicon glyphicon-stats"></i>İstatistikler</a>
                 </li>
                 <li>
-                    <a href="#"><i class="glyphicon glyphicon-signal"></i>Grafikler</a>
+                    <a href="Graphics.aspx"><i class="glyphicon glyphicon-signal"></i>Grafikler</a>
                 </li>
                 <li>
                     <a href="#"><i class="glyphicon glyphicon-picture"></i>Galeri</a>

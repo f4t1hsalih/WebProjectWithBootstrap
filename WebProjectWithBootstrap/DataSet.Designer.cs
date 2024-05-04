@@ -1402,8 +1402,6 @@ namespace WebProjectWithBootstrap {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class Std_NotesDataTable : global::System.Data.TypedTableBase<Std_NotesRow> {
             
-            private global::System.Data.DataColumn columnID;
-            
             private global::System.Data.DataColumn columnÖğrenci_Adı;
             
             private global::System.Data.DataColumn columnDers;
@@ -1453,14 +1451,6 @@ namespace WebProjectWithBootstrap {
             protected Std_NotesDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn IDColumn {
-                get {
-                    return this.columnID;
-                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1572,10 +1562,9 @@ namespace WebProjectWithBootstrap {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public Std_NotesRow AddStd_NotesRow(int ID, string Öğrenci_Adı, string Ders, byte Sınav_1, byte Sınav_2, byte Sınav_3, decimal Ortalama, bool Durum, int Öğrenci_ID) {
+            public Std_NotesRow AddStd_NotesRow(string Öğrenci_Adı, string Ders, byte Sınav_1, byte Sınav_2, byte Sınav_3, decimal Ortalama, bool Durum, int Öğrenci_ID) {
                 Std_NotesRow rowStd_NotesRow = ((Std_NotesRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        ID,
                         Öğrenci_Adı,
                         Ders,
                         Sınav_1,
@@ -1588,6 +1577,13 @@ namespace WebProjectWithBootstrap {
                 rowStd_NotesRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowStd_NotesRow);
                 return rowStd_NotesRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public Std_NotesRow FindByNot_ID(int Not_ID) {
+                return ((Std_NotesRow)(this.Rows.Find(new object[] {
+                            Not_ID})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1607,7 +1603,6 @@ namespace WebProjectWithBootstrap {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             internal void InitVars() {
-                this.columnID = base.Columns["ID"];
                 this.columnÖğrenci_Adı = base.Columns["Öğrenci_Adı"];
                 this.columnDers = base.Columns["Ders"];
                 this.columnSınav_1 = base.Columns["Sınav_1"];
@@ -1622,8 +1617,6 @@ namespace WebProjectWithBootstrap {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             private void InitClass() {
-                this.columnID = new global::System.Data.DataColumn("ID", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnID);
                 this.columnÖğrenci_Adı = new global::System.Data.DataColumn("Öğrenci_Adı", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnÖğrenci_Adı);
                 this.columnDers = new global::System.Data.DataColumn("Ders", typeof(string), null, global::System.Data.MappingType.Element);
@@ -1642,7 +1635,8 @@ namespace WebProjectWithBootstrap {
                 base.Columns.Add(this.columnNot_ID);
                 this.columnÖğrenci_ID = new global::System.Data.DataColumn("Öğrenci_ID", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnÖğrenci_ID);
-                this.columnID.AllowDBNull = false;
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnNot_ID}, true));
                 this.columnÖğrenci_Adı.ReadOnly = true;
                 this.columnÖğrenci_Adı.MaxLength = 61;
                 this.columnDers.MaxLength = 20;
@@ -1651,6 +1645,7 @@ namespace WebProjectWithBootstrap {
                 this.columnNot_ID.AutoIncrementStep = -1;
                 this.columnNot_ID.AllowDBNull = false;
                 this.columnNot_ID.ReadOnly = true;
+                this.columnNot_ID.Unique = true;
                 this.columnÖğrenci_ID.AllowDBNull = false;
             }
             
@@ -2514,17 +2509,6 @@ namespace WebProjectWithBootstrap {
             internal Std_NotesRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
                 this.tableStd_Notes = ((Std_NotesDataTable)(this.Table));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int ID {
-                get {
-                    return ((int)(this[this.tableStd_Notes.IDColumn]));
-                }
-                set {
-                    this[this.tableStd_Notes.IDColumn] = value;
-                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4471,7 +4455,6 @@ namespace WebProjectWithBootstrap.DataSetTableAdapters {
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "Std_Notes";
-            tableMapping.ColumnMappings.Add("ID", "ID");
             tableMapping.ColumnMappings.Add("Öğrenci_Adı", "Öğrenci_Adı");
             tableMapping.ColumnMappings.Add("Ders", "Ders");
             tableMapping.ColumnMappings.Add("Sınav_1", "Sınav_1");

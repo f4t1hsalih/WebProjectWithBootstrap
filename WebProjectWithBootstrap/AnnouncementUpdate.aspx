@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Teacher.Master" AutoEventWireup="true" CodeBehind="AnnouncementUpdate.aspx.cs" Inherits="WebProjectWithBootstrap.AnnouncementUpdate" %>
+﻿<%@ Page Title="Duyuru Güncelle" Language="C#" MasterPageFile="~/Teacher.Master" AutoEventWireup="true" CodeBehind="AnnouncementUpdate.aspx.cs" Inherits="WebProjectWithBootstrap.AnnouncementUpdate" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 </asp:Content>

@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Teacher.Master" AutoEventWireup="true" CodeBehind="NoteUpdate.aspx.cs" Inherits="WebProjectWithBootstrap.NoteUpdate" %>
+﻿<%@ Page Title="Not Güncelle" Language="C#" MasterPageFile="~/Teacher.Master" AutoEventWireup="true" CodeBehind="NoteUpdate.aspx.cs" Inherits="WebProjectWithBootstrap.NoteUpdate" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 </asp:Content>
