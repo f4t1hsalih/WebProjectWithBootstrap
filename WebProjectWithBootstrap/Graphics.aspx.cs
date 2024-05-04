@@ -37,6 +37,16 @@ namespace WebProjectWithBootstrap
                 Chart3.Series["Branches"].Points.AddXY(reader3[0].ToString(), Convert.ToInt32(reader3[1]));
             }
             conn.Close();
+
+            //Grafik4 - Öğrencilerin Not Ortalamaları
+            conn.Open();
+            SqlCommand cmd4 = new SqlCommand("exec graf4", conn);
+            SqlDataReader reader4 = cmd4.ExecuteReader();
+            while (reader4.Read())
+            {
+                Chart4.Series["Avarages"].Points.AddXY(reader4[0].ToString(), Convert.ToInt32(reader4[1]));
+            }
+            conn.Close();
         }
     }
 }

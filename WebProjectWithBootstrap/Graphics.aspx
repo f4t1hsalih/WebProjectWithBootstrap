@@ -8,7 +8,7 @@
         <table class="nav-justified table-bordered">
             <tr>
                 <td>
-                    <asp:Chart ID="Chart1" runat="server" Width="400px">
+                    <asp:Chart ID="Chart1" runat="server" Width="600px" Height="500px">
                         <series>
                             <asp:Series Name="Classes" ChartType="Pie">
                             </asp:Series>
@@ -20,7 +20,7 @@
                     </asp:Chart>
                 </td>
                 <td>
-                    <asp:Chart ID="Chart2" runat="server" Width="400px">
+                    <asp:Chart ID="Chart2" runat="server" Width="600px" Height="500px">
                         <series>
                             <asp:Series Name="Genders" ChartType="Doughnut">
                             </asp:Series>
@@ -34,7 +34,7 @@
             </tr>
             <tr>
                 <td>
-                    <asp:Chart ID="Chart3" runat="server" Width="400px">
+                    <asp:Chart ID="Chart3" runat="server" Width="600px" Height="500px">
                         <series>
                             <asp:Series Name="Branches">
                             </asp:Series>
@@ -46,9 +46,9 @@
                     </asp:Chart>
                 </td>
                 <td>
-                    <asp:Chart ID="Chart4" runat="server" Width="400px">
+                    <asp:Chart ID="Chart4" runat="server" Width="600px" Height="500px">
                         <series>
-                            <asp:Series Name="Series1" ChartType="Area" YValuesPerPoint="4">
+                            <asp:Series Name="Avarages" YValuesPerPoint="4">
                             </asp:Series>
                         </series>
                         <chartareas>
