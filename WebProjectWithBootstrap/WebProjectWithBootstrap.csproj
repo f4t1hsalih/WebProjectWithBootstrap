@@ -173,6 +173,8 @@
     <Content Include="AnnouncementInsert.aspx" />
     <Content Include="AnnouncementList.aspx" />
     <Content Include="AnnouncementUpdate.aspx" />
+    <Content Include="ClassInsert.aspx" />
+    <Content Include="ClassList.aspx" />
     <Content Include="NoteList.aspx" />
     <Content Include="NoteUpdate.aspx" />
     <Content Include="StudentList.aspx" />
@@ -476,6 +478,20 @@
     </Compile>
     <Compile Include="AnnouncementUpdate.aspx.designer.cs">
       <DependentUpon>AnnouncementUpdate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ClassInsert.aspx.cs">
+      <DependentUpon>ClassInsert.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ClassInsert.aspx.designer.cs">
+      <DependentUpon>ClassInsert.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ClassList.aspx.cs">
+      <DependentUpon>ClassList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ClassList.aspx.designer.cs">
+      <DependentUpon>ClassList.aspx</DependentUpon>
     </Compile>
     <Compile Include="DataSet.Designer.cs">
       <AutoGen>True</AutoGen>
