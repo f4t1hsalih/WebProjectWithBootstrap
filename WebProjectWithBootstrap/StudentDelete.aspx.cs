@@ -9,7 +9,7 @@ namespace WebProjectWithBootstrap
             int id = Convert.ToInt32(Request.QueryString["std_id"].ToString());
             DataSetTableAdapters.tbl_studentsTableAdapter dt = new DataSetTableAdapters.tbl_studentsTableAdapter();
             dt.StudentDelete(id);
-            Response.Redirect("Default.aspx");
+            Response.Redirect("StudentList.aspx");
         }
     }
 }

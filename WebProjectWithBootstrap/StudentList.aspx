@@ -10,6 +10,7 @@
                 <th scope="col">#</th>
                 <th scope="col">Ad</th>
                 <th scope="col">Soyad</th>
+                <th scope="col">Cinsiyet</th>
                 <th scope="col">Telefon</th>
                 <th scope="col">Mail</th>
                 <th scope="col">Şifre</th>
@@ -26,6 +27,7 @@
                         <td><%#Eval("std_id") %></td>
                         <td><%#Eval("std_name") %></td>
                         <td><%#Eval("std_surname") %></td>
+                        <td><%#Eval("std_gender") %></td>
                         <td><%#Eval("std_phone") %></td>
                         <td><%#Eval("std_mail") %></td>
                         <td><%#Eval("std_password") %></td>

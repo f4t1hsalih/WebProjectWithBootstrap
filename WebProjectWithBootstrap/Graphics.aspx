@@ -22,7 +22,7 @@
                 <td>
                     <asp:Chart ID="Chart2" runat="server" Width="400px">
                         <series>
-                            <asp:Series Name="Gender" ChartType="Doughnut">
+                            <asp:Series Name="Genders" ChartType="Doughnut">
                             </asp:Series>
                         </series>
                         <chartareas>
@@ -36,7 +36,7 @@
                 <td>
                     <asp:Chart ID="Chart3" runat="server" Width="400px">
                         <series>
-                            <asp:Series Name="Series1">
+                            <asp:Series Name="Branches">
                             </asp:Series>
                         </series>
                         <chartareas>

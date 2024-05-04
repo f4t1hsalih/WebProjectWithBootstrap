@@ -18,6 +18,7 @@ namespace WebProjectWithBootstrap
                     DataSetTableAdapters.tbl_studentsTableAdapter dt = new DataSetTableAdapters.tbl_studentsTableAdapter();
                     txtStdName.Text = dt.StudentFind(id)[0].std_name;
                     txtStdSurname.Text = dt.StudentFind(id)[0].std_surname;
+                    txtStdGender.Text = dt.StudentFind(id)[0].std_gender;
                     txtStdPhone.Text = dt.StudentFind(id)[0].std_phone;
                     txtStdMail.Text = dt.StudentFind(id)[0].std_mail;
                     txtStdPassword.Text = dt.StudentFind(id)[0].std_password;
@@ -33,7 +34,7 @@ namespace WebProjectWithBootstrap
         protected void Button1_Click(object sender, EventArgs e)
         {
             DataSetTableAdapters.tbl_studentsTableAdapter dt = new DataSetTableAdapters.tbl_studentsTableAdapter();
-            dt.StudentUpdate(txtStdName.Text, txtStdSurname.Text, txtStdPhone.Text, txtStdMail.Text, txtStdPassword.Text, txtStdPhoto.Text, Convert.ToInt32(txtStdId.Text));
+            dt.StudentUpdate(txtStdName.Text, txtStdSurname.Text,txtStdGender.Text, txtStdPhone.Text, txtStdMail.Text, txtStdPassword.Text, txtStdPhoto.Text, Convert.ToInt32(txtStdId.Text));
             Response.Redirect("StudentList.aspx");
         }
     }

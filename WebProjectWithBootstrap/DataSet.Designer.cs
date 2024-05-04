@@ -447,6 +447,8 @@ namespace WebProjectWithBootstrap {
             
             private global::System.Data.DataColumn columnstd_photo;
             
+            private global::System.Data.DataColumn columnstd_gender;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public tbl_studentsDataTable() {
@@ -538,6 +540,14 @@ namespace WebProjectWithBootstrap {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn std_genderColumn {
+                get {
+                    return this.columnstd_gender;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -573,7 +583,7 @@ namespace WebProjectWithBootstrap {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public tbl_studentsRow Addtbl_studentsRow(string std_name, string std_surname, string std_phone, string std_mail, string std_password, string std_photo) {
+            public tbl_studentsRow Addtbl_studentsRow(string std_name, string std_surname, string std_phone, string std_mail, string std_password, string std_photo, string std_gender) {
                 tbl_studentsRow rowtbl_studentsRow = ((tbl_studentsRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -582,7 +592,8 @@ namespace WebProjectWithBootstrap {
                         std_phone,
                         std_mail,
                         std_password,
-                        std_photo};
+                        std_photo,
+                        std_gender};
                 rowtbl_studentsRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowtbl_studentsRow);
                 return rowtbl_studentsRow;
@@ -619,6 +630,7 @@ namespace WebProjectWithBootstrap {
                 this.columnstd_mail = base.Columns["std_mail"];
                 this.columnstd_password = base.Columns["std_password"];
                 this.columnstd_photo = base.Columns["std_photo"];
+                this.columnstd_gender = base.Columns["std_gender"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -638,6 +650,8 @@ namespace WebProjectWithBootstrap {
                 base.Columns.Add(this.columnstd_password);
                 this.columnstd_photo = new global::System.Data.DataColumn("std_photo", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnstd_photo);
+                this.columnstd_gender = new global::System.Data.DataColumn("std_gender", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnstd_gender);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnstd_id}, true));
                 this.columnstd_id.AutoIncrement = true;
@@ -651,6 +665,7 @@ namespace WebProjectWithBootstrap {
                 this.columnstd_phone.MaxLength = 20;
                 this.columnstd_mail.MaxLength = 50;
                 this.columnstd_password.MaxLength = 50;
+                this.columnstd_gender.MaxLength = 5;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2173,6 +2188,22 @@ namespace WebProjectWithBootstrap {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string std_gender {
+                get {
+                    try {
+                        return ((string)(this[this.tabletbl_students.std_genderColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'std_gender\' in table \'tbl_students\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabletbl_students.std_genderColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool Isstd_nameNull() {
                 return this.IsNull(this.tabletbl_students.std_nameColumn);
             }
@@ -2241,6 +2272,18 @@ namespace WebProjectWithBootstrap {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void Setstd_photoNull() {
                 this[this.tabletbl_students.std_photoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool Isstd_genderNull() {
+                return this.IsNull(this.tabletbl_students.std_genderColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void Setstd_genderNull() {
+                this[this.tabletbl_students.std_genderColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -3096,6 +3139,7 @@ namespace WebProjectWithBootstrap.DataSetTableAdapters {
             tableMapping.ColumnMappings.Add("std_phone", "std_phone");
             tableMapping.ColumnMappings.Add("std_mail", "std_mail");
             tableMapping.ColumnMappings.Add("std_password", "std_password");
+            tableMapping.ColumnMappings.Add("std_gender", "std_gender");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
@@ -3104,23 +3148,25 @@ namespace WebProjectWithBootstrap.DataSetTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_std_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "std_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [tbl_students] ([std_name], [std_surname], [std_phone], [std_mail], [" +
-                "std_password]) VALUES (@std_name, @std_surname, @std_phone, @std_mail, @std_pass" +
-                "word)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [tbl_students] ([std_name], [std_surname], [std_gender], [std_phone]," +
+                " [std_mail], [std_password]) VALUES (@std_name, @std_surname, @std_gender, @std_" +
+                "phone, @std_mail, @std_password)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@std_name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "std_name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@std_surname", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "std_surname", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@std_gender", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "std_gender", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@std_phone", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "std_phone", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@std_mail", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "std_mail", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@std_password", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "std_password", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
             this._adapter.UpdateCommand.CommandText = "UPDATE [tbl_students] SET [std_name] = @std_name, [std_surname] = @std_surname, [" +
-                "std_phone] = @std_phone, [std_mail] = @std_mail, [std_password] = @std_password " +
-                "WHERE (([std_id] = @Original_std_id))";
+                "std_gender] = @std_gender, [std_phone] = @std_phone, [std_mail] = @std_mail, [st" +
+                "d_password] = @std_password WHERE (([std_id] = @Original_std_id))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@std_name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "std_name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@std_surname", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "std_surname", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@std_gender", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "std_gender", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@std_phone", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "std_phone", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@std_mail", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "std_mail", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@std_password", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "std_password", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -3140,13 +3186,13 @@ namespace WebProjectWithBootstrap.DataSetTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[5];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT        std_id, std_name, std_surname, std_phone, std_mail, std_password\r\nF" +
-                "ROM            tbl_students";
+            this._commandCollection[0].CommandText = "SELECT        std_id, std_name, std_surname, std_gender, std_phone, std_mail, std" +
+                "_password\r\nFROM            tbl_students";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT        std_name, std_surname, std_phone, std_mail, std_password, std_photo" +
-                "\r\nFROM            tbl_students WHERE std_id=@std_id";
+            this._commandCollection[1].CommandText = "SELECT std_id, std_name, std_surname , std_gender, std_photo, std_mail, std_passw" +
+                "ord, std_phone FROM tbl_students WHERE (std_id = @std_id)";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@std_id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "std_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
@@ -3156,12 +3202,13 @@ namespace WebProjectWithBootstrap.DataSetTableAdapters {
             this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@std_id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "std_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[3].Connection = this.Connection;
-            this._commandCollection[3].CommandText = "INSERT INTO [tbl_students] ([std_name], [std_surname], [std_phone], [std_mail], [" +
-                "std_password], [std_photo]) VALUES (@std_name, @std_surname, @std_phone, @std_ma" +
-                "il, @std_password, @std_photo)";
+            this._commandCollection[3].CommandText = "INSERT INTO [tbl_students] ([std_name], [std_surname], [std_gender], [std_phone]," +
+                " [std_mail], [std_password], [std_photo]) VALUES (@std_name, @std_surname, @std_" +
+                "gender, @std_phone, @std_mail, @std_password, @std_photo)";
             this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@std_name", global::System.Data.SqlDbType.VarChar, 30, global::System.Data.ParameterDirection.Input, 0, 0, "std_name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@std_surname", global::System.Data.SqlDbType.VarChar, 30, global::System.Data.ParameterDirection.Input, 0, 0, "std_surname", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@std_gender", global::System.Data.SqlDbType.VarChar, 5, global::System.Data.ParameterDirection.Input, 0, 0, "std_gender", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@std_phone", global::System.Data.SqlDbType.VarChar, 20, global::System.Data.ParameterDirection.Input, 0, 0, "std_phone", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@std_mail", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "std_mail", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@std_password", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "std_password", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -3169,11 +3216,13 @@ namespace WebProjectWithBootstrap.DataSetTableAdapters {
             this._commandCollection[4] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[4].Connection = this.Connection;
             this._commandCollection[4].CommandText = "UPDATE [tbl_students] SET [std_name] = @std_name, [std_surname] = @std_surname, [" +
-                "std_phone] = @std_phone, [std_mail] = @std_mail, [std_password] = @std_password," +
-                " [std_photo] = @std_photo \r\nWHERE (([std_id] = @std_id))";
+                "std_gender] = @std_gender, [std_phone] = @std_phone, [std_mail] = @std_mail, [st" +
+                "d_password] = @std_password, [std_photo] = @std_photo \r\nWHERE (([std_id] = @std_" +
+                "id))";
             this._commandCollection[4].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@std_name", global::System.Data.SqlDbType.VarChar, 30, global::System.Data.ParameterDirection.Input, 0, 0, "std_name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@std_surname", global::System.Data.SqlDbType.VarChar, 30, global::System.Data.ParameterDirection.Input, 0, 0, "std_surname", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@std_gender", global::System.Data.SqlDbType.VarChar, 5, global::System.Data.ParameterDirection.Input, 0, 0, "std_gender", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@std_phone", global::System.Data.SqlDbType.VarChar, 20, global::System.Data.ParameterDirection.Input, 0, 0, "std_phone", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@std_mail", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "std_mail", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@std_password", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "std_password", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -3286,7 +3335,7 @@ namespace WebProjectWithBootstrap.DataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string std_name, string std_surname, string std_phone, string std_mail, string std_password) {
+        public virtual int Insert(string std_name, string std_surname, string std_gender, string std_phone, string std_mail, string std_password) {
             if ((std_name == null)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -3299,23 +3348,29 @@ namespace WebProjectWithBootstrap.DataSetTableAdapters {
             else {
                 this.Adapter.InsertCommand.Parameters[1].Value = ((string)(std_surname));
             }
-            if ((std_phone == null)) {
+            if ((std_gender == null)) {
                 this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(std_phone));
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(std_gender));
             }
-            if ((std_mail == null)) {
+            if ((std_phone == null)) {
                 this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(std_mail));
+                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(std_phone));
             }
-            if ((std_password == null)) {
+            if ((std_mail == null)) {
                 this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(std_password));
+                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(std_mail));
+            }
+            if ((std_password == null)) {
+                this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(std_password));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -3337,7 +3392,7 @@ namespace WebProjectWithBootstrap.DataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string std_name, string std_surname, string std_phone, string std_mail, string std_password, int Original_std_id) {
+        public virtual int Update(string std_name, string std_surname, string std_gender, string std_phone, string std_mail, string std_password, int Original_std_id) {
             if ((std_name == null)) {
                 this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -3350,25 +3405,31 @@ namespace WebProjectWithBootstrap.DataSetTableAdapters {
             else {
                 this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(std_surname));
             }
-            if ((std_phone == null)) {
+            if ((std_gender == null)) {
                 this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(std_phone));
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(std_gender));
             }
-            if ((std_mail == null)) {
+            if ((std_phone == null)) {
                 this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(std_mail));
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(std_phone));
             }
-            if ((std_password == null)) {
+            if ((std_mail == null)) {
                 this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(std_password));
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(std_mail));
             }
-            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_std_id));
+            if ((std_password == null)) {
+                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(std_password));
+            }
+            this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(Original_std_id));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -3413,7 +3474,7 @@ namespace WebProjectWithBootstrap.DataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, false)]
-        public virtual int StudentInsert(string std_name, string std_surname, string std_phone, string std_mail, string std_password, string std_photo) {
+        public virtual int StudentInsert(string std_name, string std_surname, string std_gender, string std_phone, string std_mail, string std_password, string std_photo) {
             global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[3];
             if ((std_name == null)) {
                 command.Parameters[0].Value = global::System.DBNull.Value;
@@ -3427,29 +3488,35 @@ namespace WebProjectWithBootstrap.DataSetTableAdapters {
             else {
                 command.Parameters[1].Value = ((string)(std_surname));
             }
-            if ((std_phone == null)) {
+            if ((std_gender == null)) {
                 command.Parameters[2].Value = global::System.DBNull.Value;
             }
             else {
-                command.Parameters[2].Value = ((string)(std_phone));
+                command.Parameters[2].Value = ((string)(std_gender));
             }
-            if ((std_mail == null)) {
+            if ((std_phone == null)) {
                 command.Parameters[3].Value = global::System.DBNull.Value;
             }
             else {
-                command.Parameters[3].Value = ((string)(std_mail));
+                command.Parameters[3].Value = ((string)(std_phone));
             }
-            if ((std_password == null)) {
+            if ((std_mail == null)) {
                 command.Parameters[4].Value = global::System.DBNull.Value;
             }
             else {
-                command.Parameters[4].Value = ((string)(std_password));
+                command.Parameters[4].Value = ((string)(std_mail));
             }
-            if ((std_photo == null)) {
+            if ((std_password == null)) {
                 command.Parameters[5].Value = global::System.DBNull.Value;
             }
             else {
-                command.Parameters[5].Value = ((string)(std_photo));
+                command.Parameters[5].Value = ((string)(std_password));
+            }
+            if ((std_photo == null)) {
+                command.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[6].Value = ((string)(std_photo));
             }
             global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
             if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -3472,7 +3539,7 @@ namespace WebProjectWithBootstrap.DataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, false)]
-        public virtual int StudentUpdate(string std_name, string std_surname, string std_phone, string std_mail, string std_password, string std_photo, int std_id) {
+        public virtual int StudentUpdate(string std_name, string std_surname, string std_gender, string std_phone, string std_mail, string std_password, string std_photo, int std_id) {
             global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[4];
             if ((std_name == null)) {
                 command.Parameters[0].Value = global::System.DBNull.Value;
@@ -3486,31 +3553,37 @@ namespace WebProjectWithBootstrap.DataSetTableAdapters {
             else {
                 command.Parameters[1].Value = ((string)(std_surname));
             }
-            if ((std_phone == null)) {
+            if ((std_gender == null)) {
                 command.Parameters[2].Value = global::System.DBNull.Value;
             }
             else {
-                command.Parameters[2].Value = ((string)(std_phone));
+                command.Parameters[2].Value = ((string)(std_gender));
             }
-            if ((std_mail == null)) {
+            if ((std_phone == null)) {
                 command.Parameters[3].Value = global::System.DBNull.Value;
             }
             else {
-                command.Parameters[3].Value = ((string)(std_mail));
+                command.Parameters[3].Value = ((string)(std_phone));
             }
-            if ((std_password == null)) {
+            if ((std_mail == null)) {
                 command.Parameters[4].Value = global::System.DBNull.Value;
             }
             else {
-                command.Parameters[4].Value = ((string)(std_password));
+                command.Parameters[4].Value = ((string)(std_mail));
             }
-            if ((std_photo == null)) {
+            if ((std_password == null)) {
                 command.Parameters[5].Value = global::System.DBNull.Value;
             }
             else {
-                command.Parameters[5].Value = ((string)(std_photo));
+                command.Parameters[5].Value = ((string)(std_password));
             }
-            command.Parameters[6].Value = ((int)(std_id));
+            if ((std_photo == null)) {
+                command.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[6].Value = ((string)(std_photo));
+            }
+            command.Parameters[7].Value = ((int)(std_id));
             global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
             if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {

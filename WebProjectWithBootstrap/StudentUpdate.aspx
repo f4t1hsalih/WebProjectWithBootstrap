@@ -22,6 +22,11 @@
             </div>
             <br />
             <div>
+                <asp:Label for="txtStdGender" runat="server" Text="Öğrenci Cinsiyet:"></asp:Label>
+                <asp:TextBox ID="txtStdGender" runat="server" CssClass="form-control"></asp:TextBox>
+            </div>
+            <br />
+            <div>
                 <asp:Label for="txtStdPhone" runat="server" Text="Öğrenci Telefon:"></asp:Label>
                 <asp:TextBox ID="txtStdPhone" runat="server" CssClass="form-control"></asp:TextBox>
             </div>
