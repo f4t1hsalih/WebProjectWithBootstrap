@@ -203,6 +203,14 @@ FROM            tbl_announcements</CommandText>
                   </DbCommand>
                 </UpdateCommand>
               </DbSource>
+              <DbSource ConnectionRef="UdemySiteDBConnectionString (Web.config)" DbObjectName="" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillAnnouncementWithTchName" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetAnnouncementWithTchName" GeneratorSourceName="FillAnnouncementWithTchName" GetMethodModifier="Public" GetMethodName="GetAnnouncementWithTchName" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetAnnouncementWithTchName" UserSourceName="FillAnnouncementWithTchName">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT anc_id, anc_title, anc_content, tch_id, tch_name from  tbl_announcements A inner join tbl_teachers T on A.anc_tch = T.tch_id</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
               <DbSource ConnectionRef="UdemySiteDBConnectionString (Web.config)" DbObjectName="UdemySiteDB.dbo.tbl_announcements" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FindAnnouncement" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="AnnouncementFind" GeneratorSourceName="FindAnnouncement" GetMethodModifier="Public" GetMethodName="AnnouncementFind" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="AnnouncementFind" UserSourceName="FindAnnouncement">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
@@ -290,7 +298,7 @@ FROM            tbl_teachers</CommandText>
               <Mapping SourceColumn="Öğrenci_ID" DataSetColumn="Öğrenci_ID" />
             </Mappings>
             <Sources>
-              <DbSource ConnectionRef="UdemySiteDBConnectionString (Web.config)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillNoteFind" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetNoteFind" GeneratorSourceName="FillNoteFind" GetMethodModifier="Public" GetMethodName="GetNoteFind" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetNoteFind" UserSourceName="FillNoteFind">
+              <DbSource ConnectionRef="UdemySiteDBConnectionString (Web.config)" DbObjectName="" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillNoteFind" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetNoteFind" GeneratorSourceName="FillNoteFind" GetMethodModifier="Public" GetMethodName="GetNoteFind" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetNoteFind" UserSourceName="FillNoteFind">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>select N.note_id as 'Not_ID', N.std_id as 'Öğrenci_ID', (S.std_name + ' ' + S.std_surname) as 'Öğrenci_Adı', C.cls_name as 'Ders', exam1 as 'Sınav_1', exam2 as 'Sınav_2', exam3 as 'Sınav_3', avarage as 'Ortalama', status as 'Durum' from tbl_notes N
@@ -453,7 +461,7 @@ FROM            tbl_classes where cls_id=@cls_id</CommandText>
                 </xs:simpleType>
               </xs:element>
               <xs:element name="std_photo" msprop:Generator_ColumnPropNameInTable="std_photoColumn" msprop:Generator_ColumnPropNameInRow="std_photo" msprop:Generator_UserColumnName="std_photo" msprop:Generator_ColumnVarNameInTable="columnstd_photo" type="xs:string" minOccurs="0" />
-              <xs:element name="std_gender" msprop:Generator_UserColumnName="std_gender" msprop:Generator_ColumnPropNameInTable="std_genderColumn" msprop:Generator_ColumnPropNameInRow="std_gender" msprop:Generator_ColumnVarNameInTable="columnstd_gender" minOccurs="0">
+              <xs:element name="std_gender" msprop:Generator_ColumnPropNameInTable="std_genderColumn" msprop:Generator_ColumnPropNameInRow="std_gender" msprop:Generator_UserColumnName="std_gender" msprop:Generator_ColumnVarNameInTable="columnstd_gender" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="5" />
@@ -573,8 +581,8 @@ FROM            tbl_classes where cls_id=@cls_id</CommandText>
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="FK_tbl_announcements_tbl_teachers" msdata:parent="tbl_teachers" msdata:child="tbl_announcements" msdata:parentkey="tch_id" msdata:childkey="anc_tch" msprop:Generator_UserParentTable="tbl_teachers" msprop:Generator_UserChildTable="tbl_announcements" msprop:Generator_RelationVarName="relationFK_tbl_announcements_tbl_teachers" msprop:Generator_ChildPropName="Gettbl_announcementsRows" msprop:Generator_ParentPropName="tbl_teachersRow" msprop:Generator_UserRelationName="FK_tbl_announcements_tbl_teachers" />
-      <msdata:Relationship name="FK_tbl_teachers_tbl_classes" msdata:parent="tbl_classes" msdata:child="tbl_teachers" msdata:parentkey="cls_id" msdata:childkey="tch_branch" msprop:Generator_UserParentTable="tbl_classes" msprop:Generator_UserChildTable="tbl_teachers" msprop:Generator_RelationVarName="relationFK_tbl_teachers_tbl_classes" msprop:Generator_ChildPropName="Gettbl_teachersRows" msprop:Generator_ParentPropName="tbl_classesRow" msprop:Generator_UserRelationName="FK_tbl_teachers_tbl_classes" />
+      <msdata:Relationship name="FK_tbl_announcements_tbl_teachers" msdata:parent="tbl_teachers" msdata:child="tbl_announcements" msdata:parentkey="tch_id" msdata:childkey="anc_tch" msprop:Generator_UserParentTable="tbl_teachers" msprop:Generator_UserChildTable="tbl_announcements" msprop:Generator_RelationVarName="relationFK_tbl_announcements_tbl_teachers" msprop:Generator_ChildPropName="Gettbl_announcementsRows" msprop:Generator_UserRelationName="FK_tbl_announcements_tbl_teachers" msprop:Generator_ParentPropName="tbl_teachersRow" />
+      <msdata:Relationship name="FK_tbl_teachers_tbl_classes" msdata:parent="tbl_classes" msdata:child="tbl_teachers" msdata:parentkey="cls_id" msdata:childkey="tch_branch" msprop:Generator_UserParentTable="tbl_classes" msprop:Generator_UserChildTable="tbl_teachers" msprop:Generator_RelationVarName="relationFK_tbl_teachers_tbl_classes" msprop:Generator_ChildPropName="Gettbl_teachersRows" msprop:Generator_UserRelationName="FK_tbl_teachers_tbl_classes" msprop:Generator_ParentPropName="tbl_classesRow" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>
