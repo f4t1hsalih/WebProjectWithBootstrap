@@ -51,12 +51,17 @@
                         <li><a href="ClassInsert.aspx"><i class="glyphicon glyphicon-plus-sign"></i>Ders Ekle</a></li>
                     </ul>
                 </li>
-                <li>
-                    <a href="#"><i class="glyphicon glyphicon-envelope"></i>Mesajlar</a>
+                <li class="active">
+                    <a href="#homeSubmenu3" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="glyphicon glyphicon-comment"></i>Mesajlar</a>
+                    <ul class="collapse list-unstyled" id="homeSubmenu3">
+                        <li><a href="MessageWrite.aspx"><i class="glyphicon glyphicon-edit"></i>Mesaj Yaz</a></li>
+                        <li><a href="MessageIncoming.aspx"><i class="glyphicon glyphicon-save"></i>Gelen Mesajlar</a></li>
+                        <li><a href="MessageOutgoing.aspx"><i class="glyphicon glyphicon-open"></i>Giden Mesajlar</a></li>
+                    </ul>
                 </li>
                 <li class="active">
-                    <a href="#homeSubmenu3" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="glyphicon glyphicon-bullhorn"></i>Duyuru Listesi</a>
-                    <ul class="collapse list-unstyled" id="homeSubmenu3">
+                    <a href="#homeSubmenu4" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="glyphicon glyphicon-bullhorn"></i>Duyuru Listesi</a>
+                    <ul class="collapse list-unstyled" id="homeSubmenu4">
                         <li><a href="AnnouncementList.aspx"><i class="glyphicon glyphicon-list"></i>Duyuru Listesi</a></li>
                         <li><a href="AnnouncementInsert.aspx"><i class="glyphicon glyphicon-plus-sign"></i>Duyuru Ekle</a></li>
                     </ul>
@@ -74,7 +79,7 @@
                     <a href="#"><i class="glyphicon glyphicon-picture"></i>Galeri</a>
                 </li>
                 <li>
-                    <a href="#"><i class="glyphicon glyphicon-cog"></i>Ayarlar</a>
+                    <a href="#"><i class="glyphicon glyphicon-off"></i>Çıkış Yap</a>
                 </li>
             </ul>
 
