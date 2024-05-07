@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace WebProjectWithBootstrap
 {
@@ -11,7 +6,9 @@ namespace WebProjectWithBootstrap
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            DataSetTableAdapters.tbl_messagesTableAdapter dt = new DataSetTableAdapters.tbl_messagesTableAdapter();
+            Repeater1.DataSource = dt.GetMessageList();
+            Repeater1.DataBind();
         }
     }
 }

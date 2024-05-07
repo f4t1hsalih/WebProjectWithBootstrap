@@ -8,6 +8,7 @@
         <thead>
             <tr>
                 <th scope="col">#</th>
+                <th scope="col">Numara</th>
                 <th scope="col">Ad</th>
                 <th scope="col">Soyad</th>
                 <th scope="col">Cinsiyet</th>
@@ -25,6 +26,7 @@
 
                     <tr>
                         <td><%#Eval("std_id") %></td>
+                        <td><%#Eval("std_number") %></td>
                         <td><%#Eval("std_name") %></td>
                         <td><%#Eval("std_surname") %></td>
                         <td><%#Eval("std_gender") %></td>
