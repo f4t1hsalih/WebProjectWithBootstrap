@@ -2132,6 +2132,8 @@ namespace WebProjectWithBootstrap {
             
             private global::System.Data.DataColumn columnmsg_content;
             
+            private global::System.Data.DataColumn columnmsg_date;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public tbl_messagesDataTable() {
@@ -2207,6 +2209,14 @@ namespace WebProjectWithBootstrap {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn msg_dateColumn {
+                get {
+                    return this.columnmsg_date;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -2242,14 +2252,15 @@ namespace WebProjectWithBootstrap {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public tbl_messagesRow Addtbl_messagesRow(string msg_sender, string msg_receiver, string msg_title, string msg_content) {
+            public tbl_messagesRow Addtbl_messagesRow(string msg_sender, string msg_receiver, string msg_title, string msg_content, System.DateTime msg_date) {
                 tbl_messagesRow rowtbl_messagesRow = ((tbl_messagesRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         msg_sender,
                         msg_receiver,
                         msg_title,
-                        msg_content};
+                        msg_content,
+                        msg_date};
                 rowtbl_messagesRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowtbl_messagesRow);
                 return rowtbl_messagesRow;
@@ -2284,6 +2295,7 @@ namespace WebProjectWithBootstrap {
                 this.columnmsg_receiver = base.Columns["msg_receiver"];
                 this.columnmsg_title = base.Columns["msg_title"];
                 this.columnmsg_content = base.Columns["msg_content"];
+                this.columnmsg_date = base.Columns["msg_date"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2299,6 +2311,8 @@ namespace WebProjectWithBootstrap {
                 base.Columns.Add(this.columnmsg_title);
                 this.columnmsg_content = new global::System.Data.DataColumn("msg_content", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnmsg_content);
+                this.columnmsg_date = new global::System.Data.DataColumn("msg_date", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnmsg_date);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnmsg_id}, true));
                 this.columnmsg_id.AutoIncrement = true;
@@ -3329,6 +3343,22 @@ namespace WebProjectWithBootstrap {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public System.DateTime msg_date {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tabletbl_messages.msg_dateColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'msg_date\' in table \'tbl_messages\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabletbl_messages.msg_dateColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool Ismsg_senderNull() {
                 return this.IsNull(this.tabletbl_messages.msg_senderColumn);
             }
@@ -3373,6 +3403,18 @@ namespace WebProjectWithBootstrap {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void Setmsg_contentNull() {
                 this[this.tabletbl_messages.msg_contentColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool Ismsg_dateNull() {
+                return this.IsNull(this.tabletbl_messages.msg_dateColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void Setmsg_dateNull() {
+                this[this.tabletbl_messages.msg_dateColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -5854,6 +5896,7 @@ inner join tbl_classes C on C.cls_id = N.cls_id where N.note_id=@note_id";
             tableMapping.ColumnMappings.Add("msg_receiver", "msg_receiver");
             tableMapping.ColumnMappings.Add("msg_title", "msg_title");
             tableMapping.ColumnMappings.Add("msg_content", "msg_content");
+            tableMapping.ColumnMappings.Add("msg_date", "msg_date");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
@@ -5863,22 +5906,25 @@ inner join tbl_classes C on C.cls_id = N.cls_id where N.note_id=@note_id";
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
             this._adapter.InsertCommand.CommandText = "INSERT INTO [tbl_messages] ([msg_sender], [msg_receiver], [msg_title], [msg_conte" +
-                "nt]) VALUES (@msg_sender, @msg_receiver, @msg_title, @msg_content)";
+                "nt], [msg_date]) VALUES (@msg_sender, @msg_receiver, @msg_title, @msg_content, @" +
+                "msg_date)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@msg_sender", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "msg_sender", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@msg_receiver", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "msg_receiver", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@msg_title", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "msg_title", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@msg_content", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "msg_content", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@msg_date", global::System.Data.SqlDbType.SmallDateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "msg_date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
             this._adapter.UpdateCommand.CommandText = "UPDATE [tbl_messages] SET [msg_sender] = @msg_sender, [msg_receiver] = @msg_recei" +
-                "ver, [msg_title] = @msg_title, [msg_content] = @msg_content WHERE (([msg_id] = @" +
-                "Original_msg_id))";
+                "ver, [msg_title] = @msg_title, [msg_content] = @msg_content, [msg_date] = @msg_d" +
+                "ate WHERE (([msg_id] = @Original_msg_id))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@msg_sender", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "msg_sender", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@msg_receiver", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "msg_receiver", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@msg_title", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "msg_title", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@msg_content", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "msg_content", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@msg_date", global::System.Data.SqlDbType.SmallDateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "msg_date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_msg_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "msg_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
@@ -5893,19 +5939,24 @@ inner join tbl_classes C on C.cls_id = N.cls_id where N.note_id=@note_id";
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT        msg_id, msg_sender, msg_receiver, msg_title, msg_content\r\nFROM     " +
-                "       tbl_messages\r\nWHERE        (msg_receiver = \'0001\')";
+            this._commandCollection[0].CommandText = "SELECT        msg_id, msg_sender, msg_receiver, msg_title, msg_content, msg_date\r" +
+                "\nFROM            tbl_messages\r\nWHERE        (msg_receiver = \'0001\')";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = "SELECT msg_content, msg_date, msg_id, msg_receiver, msg_sender, msg_title FROM tb" +
+                "l_messages WHERE (msg_sender = \'0001\')";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int FillMessageList(DataSet.tbl_messagesDataTable dataTable) {
+        public virtual int FillMessageIncomingList(DataSet.tbl_messagesDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -5918,8 +5969,32 @@ inner join tbl_classes C on C.cls_id = N.cls_id where N.note_id=@note_id";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DataSet.tbl_messagesDataTable GetMessageList() {
+        public virtual DataSet.tbl_messagesDataTable GetMessageIncomingList() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            DataSet.tbl_messagesDataTable dataTable = new DataSet.tbl_messagesDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillMessageOutgoingList(DataSet.tbl_messagesDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual DataSet.tbl_messagesDataTable GetMessageOutgoingList() {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
             DataSet.tbl_messagesDataTable dataTable = new DataSet.tbl_messagesDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
@@ -5980,7 +6055,7 @@ inner join tbl_classes C on C.cls_id = N.cls_id where N.note_id=@note_id";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string msg_sender, string msg_receiver, string msg_title, string msg_content) {
+        public virtual int Insert(string msg_sender, string msg_receiver, string msg_title, string msg_content, global::System.Nullable<global::System.DateTime> msg_date) {
             if ((msg_sender == null)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -6005,6 +6080,12 @@ inner join tbl_classes C on C.cls_id = N.cls_id where N.note_id=@note_id";
             else {
                 this.Adapter.InsertCommand.Parameters[3].Value = ((string)(msg_content));
             }
+            if ((msg_date.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[4].Value = ((System.DateTime)(msg_date.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -6025,7 +6106,7 @@ inner join tbl_classes C on C.cls_id = N.cls_id where N.note_id=@note_id";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string msg_sender, string msg_receiver, string msg_title, string msg_content, int Original_msg_id) {
+        public virtual int Update(string msg_sender, string msg_receiver, string msg_title, string msg_content, global::System.Nullable<global::System.DateTime> msg_date, int Original_msg_id) {
             if ((msg_sender == null)) {
                 this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -6050,7 +6131,13 @@ inner join tbl_classes C on C.cls_id = N.cls_id where N.note_id=@note_id";
             else {
                 this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(msg_content));
             }
-            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Original_msg_id));
+            if ((msg_date.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((System.DateTime)(msg_date.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_msg_id));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {

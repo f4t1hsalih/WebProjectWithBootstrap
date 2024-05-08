@@ -2,12 +2,12 @@
 
 namespace WebProjectWithBootstrap
 {
-    public partial class MessageIncoming : System.Web.UI.Page
+    public partial class MessageOutgoing : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
             DataSetTableAdapters.tbl_messagesTableAdapter dt = new DataSetTableAdapters.tbl_messagesTableAdapter();
-            Repeater1.DataSource = dt.GetMessageIncomingList();
+            Repeater1.DataSource = dt.GetMessageOutgoingList();
             Repeater1.DataBind();
         }
     }

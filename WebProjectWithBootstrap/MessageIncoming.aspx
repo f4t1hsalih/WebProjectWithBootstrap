@@ -10,7 +10,7 @@
              <th scope="col">Gönderen</th>
              <th scope="col">Başlık</th>
              <th scope="col">Mesaj</th>
-             <th scope="col">İşlemler</th>
+             <th scope="col">Tarih</th>
          </tr>
      </thead>
      <tbody>
@@ -24,10 +24,7 @@
                      <td><%#Eval("msg_sender") %></td>
                      <td><%#Eval("msg_title") %></td>
                      <td><%#Eval("msg_content") %></td>
-                     <td>
-                         <asp:HyperLink ID="HyperLink1" NavigateUrl='<%#"~/#.aspx?msg_id="+Eval("msg_id") %>' CssClass="btn btn-danger" runat="server">Sil</asp:HyperLink>
-                     </td>
-
+                     <td><%#Eval("msg_date") %></td>
                  </tr>
 
              </itemtemplate>
