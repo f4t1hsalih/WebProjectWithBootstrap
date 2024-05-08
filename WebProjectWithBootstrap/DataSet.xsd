@@ -528,6 +528,46 @@ where exam1=(select max(exam1) from tbl_notes where cls_id=3)</CommandText>
               </DbCommand>
             </SelectCommand>
           </DbSource>
+          <DbSource ConnectionRef="UdemySiteDBConnectionString (WebProjectWithBootstrap)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="Statistic8" MethodsParameterType="CLR" Modifier="Public" Name="Statistic8" QueryType="Scalar" ScalarCallRetval="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy7" UserSourceName="Statistic8">
+            <SelectCommand>
+              <DbCommand CommandType="Text" ModifiedByUser="true">
+                <CommandText>select avg((exam1+exam2+exam3)/3) from tbl_notes where cls_id=2</CommandText>
+                <Parameters />
+              </DbCommand>
+            </SelectCommand>
+          </DbSource>
+          <DbSource ConnectionRef="UdemySiteDBConnectionString (WebProjectWithBootstrap)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="Statistic9" MethodsParameterType="CLR" Modifier="Public" Name="Statistic9" QueryType="Scalar" ScalarCallRetval="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy8" UserSourceName="Statistic9">
+            <SelectCommand>
+              <DbCommand CommandType="Text" ModifiedByUser="true">
+                <CommandText>select avg((exam1+exam2+exam3)/3) from tbl_notes where cls_id=3</CommandText>
+                <Parameters />
+              </DbCommand>
+            </SelectCommand>
+          </DbSource>
+          <DbSource ConnectionRef="UdemySiteDBConnectionString (WebProjectWithBootstrap)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="Statistic10" MethodsParameterType="CLR" Modifier="Public" Name="Statistic10" QueryType="Scalar" ScalarCallRetval="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy9" UserSourceName="Statistic10">
+            <SelectCommand>
+              <DbCommand CommandType="Text" ModifiedByUser="true">
+                <CommandText>select avg((exam1+exam2+exam3)/3) from tbl_notes where cls_id=4</CommandText>
+                <Parameters />
+              </DbCommand>
+            </SelectCommand>
+          </DbSource>
+          <DbSource ConnectionRef="UdemySiteDBConnectionString (WebProjectWithBootstrap)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="Statistic11" MethodsParameterType="CLR" Modifier="Public" Name="Statistic11" QueryType="Scalar" ScalarCallRetval="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy10" UserSourceName="Statistic11">
+            <SelectCommand>
+              <DbCommand CommandType="Text" ModifiedByUser="true">
+                <CommandText>select count(*) from tbl_notes where status=1 and cls_id=2</CommandText>
+                <Parameters />
+              </DbCommand>
+            </SelectCommand>
+          </DbSource>
+          <DbSource ConnectionRef="UdemySiteDBConnectionString (WebProjectWithBootstrap)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="Statistic12" MethodsParameterType="CLR" Modifier="Public" Name="Statistic12" QueryType="Scalar" ScalarCallRetval="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy11" UserSourceName="Statistic12">
+            <SelectCommand>
+              <DbCommand CommandType="Text" ModifiedByUser="true">
+                <CommandText>select count(*) from tbl_notes where status=0 and cls_id=2</CommandText>
+                <Parameters />
+              </DbCommand>
+            </SelectCommand>
+          </DbSource>
         </Sources>
       </DataSource>
     </xs:appinfo>

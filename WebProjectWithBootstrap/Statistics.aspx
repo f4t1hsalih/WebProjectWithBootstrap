@@ -35,14 +35,25 @@
                 <br />
             </div>
             <div>
-                <asp:TextBox ID="TextBox8" runat="server" Class="form-control" ReadOnly="true">Algoritma Not Ortalaması: ***</asp:TextBox>
+                <asp:TextBox ID="TextBox8" runat="server" Class="form-control" ReadOnly="true">Matemetik Okul Ortalaması: ***</asp:TextBox>
                 <br />
             </div>
             <div>
-                <asp:TextBox ID="TextBox9" runat="server" Class="form-control" ReadOnly="true">Türkçe Not Ortalaması: ***</asp:TextBox>
+                <asp:TextBox ID="TextBox9" runat="server" Class="form-control" ReadOnly="true">Edebiyat Okul Ortalaması: ***</asp:TextBox>
                 <br />
             </div>
-
+            <div>
+                <asp:TextBox ID="TextBox10" runat="server" Class="form-control" ReadOnly="true">Fizik Okul Ortalaması: ***</asp:TextBox>
+                <br />
+            </div>
+            <div>
+                <asp:TextBox ID="TextBox11" runat="server" Class="form-control" ReadOnly="true">Matematik Dersinden Geçen Öğrenci Sayısı: ***</asp:TextBox>
+                <br />
+            </div>
+            <div>
+                <asp:TextBox ID="TextBox12" runat="server" Class="form-control" ReadOnly="true">Matematik Dersinden Kalan Öğrenci Sayısı: ***</asp:TextBox>
+                <br />
+            </div>
         </div>
     </form>
 

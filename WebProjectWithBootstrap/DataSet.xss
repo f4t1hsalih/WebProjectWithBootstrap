@@ -12,7 +12,7 @@
     <Shape ID="DesignTable:Std_Notes" ZOrder="5" X="189" Y="389" Height="286" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="197" />
     <Shape ID="DesignTable:tbl_classes" ZOrder="7" X="571" Y="470" Height="191" Width="232" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="64" />
     <Shape ID="DesignTable:tbl_messages" ZOrder="2" X="1051" Y="183" Height="210" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="121" />
-    <Shape ID="DesignSources:QueriesTableAdapter" ZOrder="1" X="1166" Y="455" Height="162" Width="188" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="158" />
+    <Shape ID="DesignSources:QueriesTableAdapter" ZOrder="1" X="1166" Y="455" Height="257" Width="188" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="253" />
   </Shapes>
   <Connectors>
     <Connector ID="DesignRelation:FK_tbl_announcements_tbl_teachers" ZOrder="8" LineWidth="11">
