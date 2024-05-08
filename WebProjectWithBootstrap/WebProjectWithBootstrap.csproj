@@ -181,6 +181,7 @@
     <Content Include="Graphics.aspx" />
     <Content Include="MessageIncoming.aspx" />
     <Content Include="MessageOutgoing.aspx" />
+    <Content Include="MessageWrite.aspx" />
     <Content Include="NoteList.aspx" />
     <Content Include="NoteUpdate.aspx" />
     <Content Include="StudentList.aspx" />
@@ -538,6 +539,13 @@
     </Compile>
     <Compile Include="MessageOutgoing.aspx.designer.cs">
       <DependentUpon>MessageOutgoing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MessageWrite.aspx.cs">
+      <DependentUpon>MessageWrite.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MessageWrite.aspx.designer.cs">
+      <DependentUpon>MessageWrite.aspx</DependentUpon>
     </Compile>
     <Compile Include="NoteList.aspx.cs">
       <DependentUpon>NoteList.aspx</DependentUpon>
