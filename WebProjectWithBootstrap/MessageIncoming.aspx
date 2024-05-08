@@ -21,7 +21,7 @@
 
                  <tr>
                      <td><%#Eval("msg_id") %></td>
-                     <td><%#Eval("msg_sender") %></td>
+                     <td><%#Eval("std_name") %></td>
                      <td><%#Eval("msg_title") %></td>
                      <td><%#Eval("msg_content") %></td>
                      <td><%#Eval("msg_date") %></td>
