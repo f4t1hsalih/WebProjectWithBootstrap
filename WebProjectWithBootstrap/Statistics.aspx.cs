@@ -11,6 +11,9 @@ namespace WebProjectWithBootstrap
             TextBox2.Text = "Toplam Öğretmen Sayısı: " + dt.Statistic2().ToString();
             TextBox3.Text = "Toplam Ders Sayısı: " + dt.Statistic3().ToString();
             TextBox4.Text = "Matematik Sınav 1'de En Yüksek Not Alan Öğrenci: " + dt.Statistic4().ToString();
+            TextBox5.Text = "Fizik Sınav 1'de En Yüksek Not Alan Öğrenci: " + dt.Statistic5().ToString();
+            TextBox6.Text = "Dil Anlatım Sınav 1'de En Yüksek Not Alan Öğrenci: " + dt.Statistic6().ToString();
+            TextBox7.Text = "Edebiyat Sınav 1'de En Yüksek Not Alan Öğrenci: " + dt.Statistic7().ToString();
 
         }
     }

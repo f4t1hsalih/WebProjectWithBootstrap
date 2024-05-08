@@ -23,15 +23,15 @@
                 <br />
             </div>
             <div>
-                <asp:TextBox ID="TextBox5" runat="server" Class="form-control" ReadOnly="true">Toplam Atılan Mesaj: ***</asp:TextBox>
+                <asp:TextBox ID="TextBox5" runat="server" Class="form-control" ReadOnly="true">Fizik Sınav 1'de En Yüksek Not Alan Öğrenci: ***</asp:TextBox>
                 <br />
             </div>
             <div>
-                <asp:TextBox ID="TextBox6" runat="server" Class="form-control" ReadOnly="true">Sistemdeki Duyuru Sayısı: ***</asp:TextBox>
+                <asp:TextBox ID="TextBox6" runat="server" Class="form-control" ReadOnly="true">Dil Anlatım Sınav 1'de En Yüksek Not Alan Öğrenci: ***</asp:TextBox>
                 <br />
             </div>
             <div>
-                <asp:TextBox ID="TextBox7" runat="server" Class="form-control" ReadOnly="true">Matematik Not Ortalaması: ***</asp:TextBox>
+                <asp:TextBox ID="TextBox7" runat="server" Class="form-control" ReadOnly="true">Edebiyat Sınav 1'de En Yüksek Not Alan Öğrenci: ***</asp:TextBox>
                 <br />
             </div>
             <div>
