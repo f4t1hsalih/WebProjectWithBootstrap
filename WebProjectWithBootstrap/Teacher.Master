@@ -70,7 +70,7 @@
                     <a href="NoteList.aspx"><i class="glyphicon glyphicon-font"></i>Notlar</a>
                 </li>
                 <li>
-                    <a href="#"><i class="glyphicon glyphicon-stats"></i>İstatistikler</a>
+                    <a href="Statistics.aspx"><i class="glyphicon glyphicon-stats"></i>İstatistikler</a>
                 </li>
                 <li>
                     <a href="Graphics.aspx"><i class="glyphicon glyphicon-signal"></i>Grafikler</a>

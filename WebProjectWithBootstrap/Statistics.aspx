@@ -19,7 +19,7 @@
                 <br />
             </div>
             <div>
-                <asp:TextBox ID="TextBox4" runat="server" Class="form-control" ReadOnly="true">En Başarılı Ders: ***</asp:TextBox>
+                <asp:TextBox ID="TextBox4" runat="server" Class="form-control" ReadOnly="true">Matematik Sınav 1'de En Yüksek Not Alan Öğrenci: ***</asp:TextBox>
                 <br />
             </div>
             <div>
