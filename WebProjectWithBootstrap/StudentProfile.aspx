@@ -6,27 +6,27 @@
     <form id="Form1" runat="server">
     <div class="form-group">
         <div>
-            <asp:TextBox ID="TextBox1" runat="server" Class="form-control" ReadOnly="true">Numara:</asp:TextBox>
+            <asp:TextBox ID="txtNumber" runat="server" Class="form-control" ReadOnly="true">Numara:</asp:TextBox>
             <br />
         </div>
         <div>
-            <asp:TextBox ID="TextBox2" runat="server" Class="form-control" ReadOnly="true">Ad Soyad:</asp:TextBox>
+            <asp:TextBox ID="txtNameSurname" runat="server" Class="form-control" ReadOnly="true">Ad Soyad:</asp:TextBox>
             <br />
         </div>
         <div>
-            <asp:TextBox ID="TextBox3" runat="server" Class="form-control" ReadOnly="true">Mail:</asp:TextBox>
+            <asp:TextBox ID="txtMail" runat="server" Class="form-control" ReadOnly="true">Mail:</asp:TextBox>
             <br />
         </div>
         <div>
-            <asp:TextBox ID="TextBox4" runat="server" Class="form-control" ReadOnly="true">Telefon:</asp:TextBox>
+            <asp:TextBox ID="txtTel" runat="server" Class="form-control" ReadOnly="true">Telefon:</asp:TextBox>
             <br />
         </div>
         <div>
-            <asp:TextBox ID="TextBox5" runat="server" Class="form-control" ReadOnly="true">Şifre:</asp:TextBox>
+            <asp:TextBox ID="txtPassword" runat="server" Class="form-control" ReadOnly="true">Şifre:</asp:TextBox>
             <br />
         </div>
         <div>
-            <asp:TextBox ID="TextBox6" runat="server" Class="form-control" ReadOnly="true">Fotoğraf:</asp:TextBox>
+            <asp:TextBox ID="txtPhoto" runat="server" Class="form-control" ReadOnly="true">Fotoğraf:</asp:TextBox>
             <br />
         </div>
     </div>
