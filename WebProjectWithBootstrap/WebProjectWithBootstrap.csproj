@@ -178,6 +178,7 @@
     <Content Include="ClassInsert.aspx" />
     <Content Include="ClassList.aspx" />
     <Content Include="ClassUpdate.aspx" />
+    <Content Include="Dosyalar1\StyleSheetStudent.css" />
     <Content Include="Graphics.aspx" />
     <Content Include="LoginPanel.aspx" />
     <Content Include="MessageIncoming.aspx" />
