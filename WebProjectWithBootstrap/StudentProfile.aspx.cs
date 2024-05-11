@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace WebProjectWithBootstrap
 {
-    public partial class StudentHomePage : System.Web.UI.Page
+    public partial class StudentProfile : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

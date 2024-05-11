@@ -187,7 +187,6 @@
     <Content Include="NoteList.aspx" />
     <Content Include="NoteUpdate.aspx" />
     <Content Include="Statistics.aspx" />
-    <Content Include="StudentHomePage.aspx" />
     <Content Include="StudentList.aspx" />
     <Content Include="Dosyalar1\bootstrap-3.3.7\.gitattributes" />
     <Content Include="Dosyalar1\bootstrap-3.3.7\.gitignore" />
@@ -458,6 +457,7 @@
     <Content Include="Dosyalar1\StyleSheet2.css" />
     <Content Include="StudentDelete.aspx" />
     <Content Include="StudentInsert.aspx" />
+    <Content Include="StudentProfile.aspx" />
     <Content Include="StudentUpdate.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -586,13 +586,6 @@
     <Compile Include="Student.Master.designer.cs">
       <DependentUpon>Student.Master</DependentUpon>
     </Compile>
-    <Compile Include="StudentHomePage.aspx.cs">
-      <DependentUpon>StudentHomePage.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="StudentHomePage.aspx.designer.cs">
-      <DependentUpon>StudentHomePage.aspx</DependentUpon>
-    </Compile>
     <Compile Include="StudentList.aspx.cs">
       <DependentUpon>StudentList.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -614,6 +607,13 @@
     </Compile>
     <Compile Include="StudentInsert.aspx.designer.cs">
       <DependentUpon>StudentInsert.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StudentProfile.aspx.cs">
+      <DependentUpon>StudentProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StudentProfile.aspx.designer.cs">
+      <DependentUpon>StudentProfile.aspx</DependentUpon>
     </Compile>
     <Compile Include="StudentUpdate.aspx.cs">
       <DependentUpon>StudentUpdate.aspx</DependentUpon>
