@@ -184,6 +184,7 @@
     <Content Include="MessageIncoming.aspx" />
     <Content Include="MessageIncomingForStudent.aspx" />
     <Content Include="MessageOutgoing.aspx" />
+    <Content Include="MessageOutgoingForStudent.aspx" />
     <Content Include="MessageWrite.aspx" />
     <Content Include="NoteList.aspx" />
     <Content Include="NoteUpdate.aspx" />
@@ -560,6 +561,13 @@
     </Compile>
     <Compile Include="MessageOutgoing.aspx.designer.cs">
       <DependentUpon>MessageOutgoing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MessageOutgoingForStudent.aspx.cs">
+      <DependentUpon>MessageOutgoingForStudent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MessageOutgoingForStudent.aspx.designer.cs">
+      <DependentUpon>MessageOutgoingForStudent.aspx</DependentUpon>
     </Compile>
     <Compile Include="MessageWrite.aspx.cs">
       <DependentUpon>MessageWrite.aspx</DependentUpon>
