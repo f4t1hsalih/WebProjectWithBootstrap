@@ -182,6 +182,7 @@
     <Content Include="Graphics.aspx" />
     <Content Include="LoginPanel.aspx" />
     <Content Include="MessageIncoming.aspx" />
+    <Content Include="MessageIncomingForStudent.aspx" />
     <Content Include="MessageOutgoing.aspx" />
     <Content Include="MessageWrite.aspx" />
     <Content Include="NoteList.aspx" />
@@ -545,6 +546,13 @@
     </Compile>
     <Compile Include="MessageIncoming.aspx.designer.cs">
       <DependentUpon>MessageIncoming.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MessageIncomingForStudent.aspx.cs">
+      <DependentUpon>MessageIncomingForStudent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MessageIncomingForStudent.aspx.designer.cs">
+      <DependentUpon>MessageIncomingForStudent.aspx</DependentUpon>
     </Compile>
     <Compile Include="MessageOutgoing.aspx.cs">
       <DependentUpon>MessageOutgoing.aspx</DependentUpon>

@@ -40,7 +40,7 @@
                     <a href="#homeSubmenu3" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="glyphicon glyphicon-comment"></i>Mesajlar</a>
                     <ul class="collapse list-unstyled" id="homeSubmenu3">
                         <li><a href="#.aspx"><i class="glyphicon glyphicon-edit"></i>Mesaj Yaz</a></li>
-                        <li><a href="#.aspx"><i class="glyphicon glyphicon-save"></i>Gelen Mesajlar</a></li>
+                        <li><a href="MessageIncomingForStudent.aspx"><i class="glyphicon glyphicon-save"></i>Gelen Mesajlar</a></li>
                         <li><a href="#.aspx"><i class="glyphicon glyphicon-open"></i>Giden Mesajlar</a></li>
                     </ul>
                 </li>
