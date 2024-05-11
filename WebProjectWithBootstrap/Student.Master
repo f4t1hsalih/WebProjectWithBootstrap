@@ -48,7 +48,7 @@
                     <a href="#.aspx"><i class="glyphicon glyphicon-list"></i>Duyurular</a>
                 </li>
                 <li>
-                    <a href="#.aspx"><i class="glyphicon glyphicon-font"></i>Sınav Notları</a>
+                    <a href="StudentNotes.aspx"><i class="glyphicon glyphicon-font"></i>Sınav Notları</a>
                 </li>
                 <li>
                     <a href="LoginPanel.aspx"><i class="glyphicon glyphicon-off"></i>Çıkış Yap</a>
