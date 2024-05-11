@@ -76,10 +76,7 @@
                     <a href="Graphics.aspx"><i class="glyphicon glyphicon-signal"></i>Grafikler</a>
                 </li>
                 <li>
-                    <a href="#"><i class="glyphicon glyphicon-picture"></i>Galeri</a>
-                </li>
-                <li>
-                    <a href="#"><i class="glyphicon glyphicon-off"></i>Çıkış Yap</a>
+                    <a href="LoginPanel.aspx"><i class="glyphicon glyphicon-off"></i>Çıkış Yap</a>
                 </li>
             </ul>
 
