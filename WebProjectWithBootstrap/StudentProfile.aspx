@@ -34,7 +34,7 @@
                 <asp:TextBox ID="txtGender" runat="server" Class="form-control" ReadOnly="true">Cinsiyet:</asp:TextBox>
                 <br />
             </div>
-            <asp:Button ID="btnUpdate" runat="server" Class="btn btn-primary" Text="Güncelle" />
+            <asp:Button ID="btnUpdate" runat="server" CssClass="btn btn-primary" Text="Güncelle" OnClick="btnUpdate_Click" />
         </div>
     </form>
 

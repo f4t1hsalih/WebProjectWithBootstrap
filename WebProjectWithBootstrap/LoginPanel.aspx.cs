@@ -35,7 +35,7 @@ namespace WebProjectWithBootstrap
                 }
 
                 //lblMessage.Visible = true;
-                //lblMessage.BackColor = System.Drawing.Color.Red;
+                //lblMessage.ForeColor = System.Drawing.Color.Red;
                 //txtPassword.Text = "Hatalı Şifre";
             }
             conn.Close();

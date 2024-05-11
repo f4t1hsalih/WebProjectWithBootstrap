@@ -459,6 +459,7 @@
     <Content Include="StudentInsert.aspx" />
     <Content Include="StudentProfile.aspx" />
     <Content Include="StudentUpdate.aspx" />
+    <Content Include="StudentUpdateWithStudent.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -621,6 +622,13 @@
     </Compile>
     <Compile Include="StudentUpdate.aspx.designer.cs">
       <DependentUpon>StudentUpdate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StudentUpdateWithStudent.aspx.cs">
+      <DependentUpon>StudentUpdateWithStudent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StudentUpdateWithStudent.aspx.designer.cs">
+      <DependentUpon>StudentUpdateWithStudent.aspx</DependentUpon>
     </Compile>
     <Compile Include="Teacher.Master.cs">
       <DependentUpon>Teacher.Master</DependentUpon>
