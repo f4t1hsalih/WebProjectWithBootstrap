@@ -20,7 +20,8 @@ namespace WebProjectWithBootstrap
             SqlDataReader dr = cmd.ExecuteReader();
             if (dr.Read())
             {
-                Response.Redirect("StudentProfile.aspx?Numara=" + txtName.Text);
+                Session.Add("StudentNumber", txtName.Text);
+                Response.Redirect("StudentProfile.aspx");
             }
             else
             {
