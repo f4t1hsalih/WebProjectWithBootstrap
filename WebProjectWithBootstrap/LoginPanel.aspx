@@ -60,7 +60,8 @@
         <form id="loginForm" runat="server">
             <asp:TextBox runat="server" ID="txtName" placeholder="Kullanıcı Adı"></asp:TextBox>
             <asp:TextBox runat="server" ID="txtPassword" TextMode="Password" placeholder="Şifre"></asp:TextBox>
-            <asp:Button runat="server" ID="btnLogin" Text="Giriş" OnClick="btnLogin_Click"/>
+<%--            <asp:Label ID="lblMessage" runat="server" Visible="false"></asp:Label>--%>
+            <asp:Button runat="server" ID="btnLogin" Text="Giriş" OnClick="btnLogin_Click" />
         </form>
     </div>
 </body>
