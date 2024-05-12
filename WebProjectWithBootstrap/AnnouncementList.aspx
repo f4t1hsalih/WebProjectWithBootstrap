@@ -18,7 +18,7 @@
 
             <asp:Repeater ID="Repeater1" runat="server">
 
-                <itemtemplate>
+                <ItemTemplate>
 
                     <tr>
                         <td><%#Eval("anc_id") %></td>
@@ -31,7 +31,7 @@
                         </td>
                     </tr>
 
-                </itemtemplate>
+                </ItemTemplate>
 
             </asp:Repeater>
 

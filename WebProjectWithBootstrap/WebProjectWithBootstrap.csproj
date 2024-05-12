@@ -173,6 +173,7 @@
     <Content Include="AnnouncementDelete.aspx" />
     <Content Include="AnnouncementInsert.aspx" />
     <Content Include="AnnouncementList.aspx" />
+    <Content Include="AnnouncementListForStudent.aspx" />
     <Content Include="AnnouncementUpdate.aspx" />
     <Content Include="ClassDelete.aspx" />
     <Content Include="ClassInsert.aspx" />
@@ -186,6 +187,7 @@
     <Content Include="MessageOutgoing.aspx" />
     <Content Include="MessageOutgoingForStudent.aspx" />
     <Content Include="MessageWrite.aspx" />
+    <Content Include="MessageWriteStudent.aspx" />
     <Content Include="NoteList.aspx" />
     <Content Include="NoteUpdate.aspx" />
     <Content Include="Statistics.aspx" />
@@ -487,6 +489,13 @@
     <Compile Include="AnnouncementList.aspx.designer.cs">
       <DependentUpon>AnnouncementList.aspx</DependentUpon>
     </Compile>
+    <Compile Include="AnnouncementListForStudent.aspx.cs">
+      <DependentUpon>AnnouncementListForStudent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AnnouncementListForStudent.aspx.designer.cs">
+      <DependentUpon>AnnouncementListForStudent.aspx</DependentUpon>
+    </Compile>
     <Compile Include="AnnouncementUpdate.aspx.cs">
       <DependentUpon>AnnouncementUpdate.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -575,6 +584,13 @@
     </Compile>
     <Compile Include="MessageWrite.aspx.designer.cs">
       <DependentUpon>MessageWrite.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MessageWriteStudent.aspx.cs">
+      <DependentUpon>MessageWriteStudent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MessageWriteStudent.aspx.designer.cs">
+      <DependentUpon>MessageWriteStudent.aspx</DependentUpon>
     </Compile>
     <Compile Include="NoteList.aspx.cs">
       <DependentUpon>NoteList.aspx</DependentUpon>

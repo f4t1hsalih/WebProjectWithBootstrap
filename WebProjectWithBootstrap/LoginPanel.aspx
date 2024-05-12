@@ -6,6 +6,7 @@
     <title>Login Paneli</title>
     <style>
         body {
+            background-color: #808080;
             font-family: Arial, sans-serif;
             display: flex;
             justify-content: center;
@@ -15,6 +16,7 @@
         }
 
         .login-container {
+            background-color: #f0f0f0;
             width: 300px;
             padding: 20px;
             border: 1px solid #ccc;
