@@ -22,6 +22,7 @@ namespace WebProjectWithBootstrap
                     var announcement = dtAnc.AnnouncementFind(announcementId)[0];
 
                     // Duyuru bilgilerini kontrollerde göster
+                    txtAncId.Text = announcement.anc_id.ToString();
                     txtAncTitle.Text = announcement.anc_title;
                     txtAncContent.Value = announcement.anc_content;
 

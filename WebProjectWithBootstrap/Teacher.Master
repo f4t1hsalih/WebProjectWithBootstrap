@@ -40,8 +40,6 @@
                         <li><a href="StudentList.aspx"><i class="glyphicon glyphicon-list"></i>Öğrenci Listesi</a></li>
                         <li><a href="StudentInsert.aspx"><i class="glyphicon glyphicon-plus-sign"></i>Öğrenci Ekle</a></li>
                         <%-- <li><a href="StudentFind.aspx"><i class="glyphicon glyphicon-question-sign"></i>Öğrenci Bul</a></li> --%>
-                        <%-- <li><a href="StudentDelete.aspx"><i class="glyphicon glyphicon-minus-sign"></i>Öğrenci Sil</a></li> --%>
-                        <%-- <li><a href="StudentUpdate.aspx"><i class="glyphicon glyphicon-info-sign"></i>Öğrenci Güncelle</a></li> --%>
                     </ul>
                 </li>
                 <li class="active">

@@ -32,6 +32,7 @@ namespace WebProjectWithBootstrap
                 SqlDataReader dr2 = cmd2.ExecuteReader();
                 if (dr2.Read())
                 {
+                    Session.Add("TeacherNumber", txtName.Text);
                     Response.Redirect("StudentList.aspx");
                 }
 

@@ -6,7 +6,7 @@ namespace WebProjectWithBootstrap
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            txtMsgSender.Text = "0001";
+            txtMsgSender.Text = Session["TeacherNumber"].ToString();
         }
 
         protected void btnSend_Click(object sender, EventArgs e)

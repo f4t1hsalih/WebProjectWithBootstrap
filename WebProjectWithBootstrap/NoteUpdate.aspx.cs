@@ -32,7 +32,7 @@ namespace WebProjectWithBootstrap
             txtAvrg.Text = average.ToString("0.00");
             if (average >= 50)
             {
-                txtStts.Text = "true";
+                txtStts.Text = "True";
             }
             else
             {

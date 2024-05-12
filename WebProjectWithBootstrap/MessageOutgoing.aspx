@@ -6,7 +6,6 @@
         <table class="table table-bordered table-hover">
     <thead>
         <tr>
-            <th scope="col">#</th>
             <th scope="col">Alıcı</th>
             <th scope="col">Başlık</th>
             <th scope="col">Mesaj</th>
@@ -20,7 +19,6 @@
             <itemtemplate>
 
                 <tr>
-                    <td><%#Eval("msg_id") %></td>
                     <td><%#Eval("std_name") %></td>
                     <td><%#Eval("msg_title") %></td>
                     <td><%#Eval("msg_content") %></td>

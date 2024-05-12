@@ -7,7 +7,7 @@ namespace WebProjectWithBootstrap
         protected void Page_Load(object sender, EventArgs e)
         {
             DataSetTableAdapters.tbl_messagesTableAdapter dt = new DataSetTableAdapters.tbl_messagesTableAdapter();
-            Repeater1.DataSource = dt.GetMessageIncomingList();
+            Repeater1.DataSource = dt.GetMessageIncomingList(Session["TeacherNumber"].ToString());
             Repeater1.DataBind();
         }
     }

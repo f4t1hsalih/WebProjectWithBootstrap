@@ -6155,9 +6155,10 @@ where N.std_id=(select std_id from tbl_students where std_number=@number)";
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT msg_id, std_name, msg_title, msg_content, msg_date FROM \r\ntbl_messages M i" +
-                "nner join tbl_students S on M.msg_sender = S.std_number\r\nWHERE msg_receiver = \'0" +
-                "001\'";
+                "nner join tbl_students S on M.msg_sender = S.std_number\r\nWHERE msg_receiver = @r" +
+                "eceiver";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@receiver", global::System.Data.SqlDbType.VarChar, 5, global::System.Data.ParameterDirection.Input, 0, 0, "msg_receiver", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
             this._commandCollection[1].CommandText = "select (tbl_students.std_name + \' \' + tbl_students.std_surname)as \'sender\', msg_t" +
@@ -6169,9 +6170,10 @@ where N.std_id=(select std_id from tbl_students where std_number=@number)";
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[2].Connection = this.Connection;
             this._commandCollection[2].CommandText = "SELECT msg_id, std_name, msg_title, msg_content, msg_date FROM\r\ntbl_messages M in" +
-                "ner join tbl_students S on S.std_number=M.msg_receiver\r\nWHERE msg_sender = \'0001" +
-                "\'";
+                "ner join tbl_students S on S.std_number=M.msg_receiver\r\nWHERE msg_sender = @send" +
+                "er";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@sender", global::System.Data.SqlDbType.VarChar, 5, global::System.Data.ParameterDirection.Input, 0, 0, "msg_sender", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[3].Connection = this.Connection;
             this._commandCollection[3].CommandText = "select (tbl_students.std_name + \' \' + tbl_students.std_surname)as \'receiver\', msg" +
@@ -6195,8 +6197,14 @@ where N.std_id=(select std_id from tbl_students where std_number=@number)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int FillMessageIncomingList(DataSet.tbl_messagesDataTable dataTable) {
+        public virtual int FillMessageIncomingList(DataSet.tbl_messagesDataTable dataTable, string receiver) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((receiver == null)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(receiver));
+            }
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }
@@ -6208,8 +6216,14 @@ where N.std_id=(select std_id from tbl_students where std_number=@number)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DataSet.tbl_messagesDataTable GetMessageIncomingList() {
+        public virtual DataSet.tbl_messagesDataTable GetMessageIncomingList(string receiver) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((receiver == null)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(receiver));
+            }
             DataSet.tbl_messagesDataTable dataTable = new DataSet.tbl_messagesDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
@@ -6255,8 +6269,14 @@ where N.std_id=(select std_id from tbl_students where std_number=@number)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int FillMessageOutgoingList(DataSet.tbl_messagesDataTable dataTable) {
+        public virtual int FillMessageOutgoingList(DataSet.tbl_messagesDataTable dataTable, string sender) {
             this.Adapter.SelectCommand = this.CommandCollection[2];
+            if ((sender == null)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(sender));
+            }
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }
@@ -6268,8 +6288,14 @@ where N.std_id=(select std_id from tbl_students where std_number=@number)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
-        public virtual DataSet.tbl_messagesDataTable GetMessageOutgoingList() {
+        public virtual DataSet.tbl_messagesDataTable GetMessageOutgoingList(string sender) {
             this.Adapter.SelectCommand = this.CommandCollection[2];
+            if ((sender == null)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(sender));
+            }
             DataSet.tbl_messagesDataTable dataTable = new DataSet.tbl_messagesDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;

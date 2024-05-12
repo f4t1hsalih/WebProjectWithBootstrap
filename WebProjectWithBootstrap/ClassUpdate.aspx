@@ -7,12 +7,12 @@
     <form id="Form1" runat="server">
         <div class="form-group">
             <div>
-                <asp:Label for="txtClsID" runat="server" CssClass="form-control" Text="Ders ID:"></asp:Label>
+                <asp:Label for="txtClsID" runat="server" Text="Ders ID:"></asp:Label>
                 <asp:TextBox ID="txtClsID" runat="server" CssClass="form-control" ReadOnly="true"></asp:TextBox>
             </div>
             <br />
             <div>
-                <asp:Label for="txtClsName" CssClass="form-control" runat="server" Text="Ders Adı:"></asp:Label>
+                <asp:Label for="txtClsName" runat="server" Text="Ders Adı:"></asp:Label>
                 <asp:TextBox ID="txtClsName" CssClass="form-control" runat="server"></asp:TextBox>
             </div>
             <br />
